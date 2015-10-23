@@ -1,4 +1,4 @@
-var app = angular.module('ShopApp',['ngRoute']);
+var app = angular.module('ShopApp',['ngRoute','ngMessages']);
 
 app.config(function($routeProvider,$httpProvider){
 	$routeProvider.when('/',{
@@ -31,6 +31,10 @@ app.config(function($routeProvider,$httpProvider){
 	.when('/add_product',{
 		templateUrl:'templates/add_product.html',
 		controller:'ProductCtrl as Ctrl'
+	})
+	.when('/checkout',{
+		templateUrl:'templates/checkout.html',
+		controller:'CheckoutCtrl as Ctrl'
 	})
 	.otherwise({
 		redirectTo:'/'
