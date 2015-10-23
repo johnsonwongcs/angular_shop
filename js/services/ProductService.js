@@ -40,7 +40,12 @@ ProductService.prototype.addProduct = function(product){
  	//return the updated list
 	return this.api.request('/newproduct',product,'POST')
 			.then(function(response){
-				console.log(response);
-			});;
+				var entry = response.data;
+				var existingEntries = JSON.parse(localStorage.getItem("products"));
+	 			existingEntries.push(entry);
+	 			con
+	 			localStorage.setItem('products', JSON.stringify(existingEntries));
+			});
+
 
 }

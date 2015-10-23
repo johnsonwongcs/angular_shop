@@ -15,6 +15,8 @@ ProductCtrl.prototype.addProduct = function(name,description,price,category,quan
 		quantity:quantity,
 		status:status
 	}
+	console.log(request_body);
+	console.log(this.productService.getProducts());
 
 	this.productService.addProduct(request_body);
 

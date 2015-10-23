@@ -4,12 +4,17 @@ app.config(function($routeProvider,$httpProvider){
 	$routeProvider.when('/',{
 		templateUrl:'templates/home.html',
 		controller:'MainCtrl as Ctrl',
+		resolve:{
+			products:function(productService){
+					return productService.getProducts();
+				}
+			}
 	})
 	.when('/login',{
 		templateUrl:'templates/login.html',
 		controller:'AuthCtrl as Ctrl'
 	})
-	.when('/admin',{
+	.when('/admin/',{
 		templateUrl:'templates/admin.html',
 		controller:'AdminCtrl as Ctrl',
 		resolve:{
