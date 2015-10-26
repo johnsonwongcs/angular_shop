@@ -1,0 +1,62 @@
+header, footer {
+    text-align: center;
+	font-family: 'Montserrat', sans-serif;
+}
+nav {
+	background: #FCEABE;
+	height: 155px;
+	color: #CC7809;
+	font-size: 0.8em;
+}
+
+nav li {
+	display: inline-block;
+	min-width: 80px;
+	height: 18px;
+    margin: 85px 0 0 1em;
+}
+
+nav .logo {
+	width: 170px;
+	margin-top: -85px;
+	vertical-align: text-top;
+	/*background: url(http://postimg.org/image/r7wib0e9x/) top center repeat-x;*/
+}
+nav .container {
+	max-width: 900px;
+}
+.top-header {
+	height: 36px;
+	background: #F7F7F5;
+	font-size: 0.7em;
+}
+.top-header li {
+	display: inline-block;
+    color: #9D9E9E;
+    min-width: 60px;
+}
+
+footer {
+	min-height: 100px;
+	background: #FFF5B0;
+	color: #CC7809;
+	font-size: 0.8em;
+}
+footer .container{
+	max-width: 1000px;
+}
+footer h3 {
+	font-size: 1.2em;
+}
+.social-media, .contact {
+	margin-top: 20px;
+	min-width: 350px;
+	display: inline-block; 
+}
+.social-media {
+	border-right: 1px solid #CC7809;
+}
+.copyright {
+	font-size: 0.6em;
+	margin: 20px;
+}

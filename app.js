@@ -10,6 +10,10 @@ app.config(function($routeProvider,$httpProvider){
 				}
 			}
 	})
+	.when('/shop',{
+		templateUrl:'templates/shop.html',
+		controller:'ShopCtrl as Ctrl'
+	})
 	.when('/login',{
 		templateUrl:'templates/login.html',
 		controller:'AuthCtrl as Ctrl'
