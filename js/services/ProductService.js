@@ -52,8 +52,6 @@ ProductService.prototype.addProduct = function(product){
 			});
 }
 ProductService.prototype.getProduct = function(productId){
-	console.log(this.products);
 	this.products = JSON.parse(this.products);
 	return this.products.filter(function(product) {return product.productId === productId})[0];
-	console.log(productid);
 }

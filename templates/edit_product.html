@@ -3,25 +3,25 @@
 </h1>
 <div class="row">
 	<div class="three colums">
-		<form ng-sumit="Ctrl.findEditProduct(productID)">
+		<form ng-submit="Ctrl.findEditProduct(productID)">
 			<input type="text" ng-model="productID" placeholder="product ID">
+			<button>Edit Product</button>
 		</form>
 	</div>
 	<div class="three columns">
-		<form ng-submit="Ctrl.saveProduct(name,description,image,price,category,quantity,status)">
-			<input type="text" ng-model="name" placeholder="name">
-			<input type="text" ng-model="image" placeholder="image url">
-			<textarea ng-model="description" placeholder="description"></textarea>
-			<input type="text" ng-model="price" placeholder="price">
-			<input type="text" ng-model="category" placeholder="category">
-			<input type="text" ng-model="quantity" placeholder="quantity">
-			<select ng-model="status">
+		<form ng-submit="Ctrl.saveProduct(Ctrl.editProduct.name,Ctrl.editProduct.description,Ctrl.editProduct.image,Ctrl.editProduct.price,Ctrl.editProduct.category,Ctrl.editProduct.quantity,Ctrl.editProduct.status)">
+			<input type="text" ng-model="Ctrl.editProduct.name" placeholder="name">
+			<input type="text" ng-model="Ctrl.editProduct.image" placeholder="image url">
+			<textarea ng-model="Ctrl.editProduct.description" placeholder="description"></textarea>
+			<input type="text" ng-model="Ctrl.editProduct.price" placeholder="price">
+			<input type="text" ng-model="Ctrl.editProduct.category" placeholder="category">
+			<input type="text" ng-model="Ctrl.editProduct.quantity" placeholder="quantity">
+			<select ng-model="Ctrl.editProduct.status">
 					<option value="" selected>Status</option>
 					<option value="active">Active</option>
 					<option value="inactive">Inactive</option>
 			</select>
-			<button>Edit Product</button>
-			<button ng-click="Ctrl.productService.getProducts()">Get Product</button>
+			<button>Save Product</button>
 		</form>
 	</div>
 </div>

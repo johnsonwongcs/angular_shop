@@ -1,21 +1,47 @@
+body{
+	font-family: 'Source Sans Pro', sans-serif;
+}
+ul {
+	list-style-type: none;
+}
+h2 {
+	font-size: 2em;
+	color: #CC7809;
+	border-bottom: 1px solid #F2C875;
+	text-transform: capitalize;
+}
+h3 {
+	font-family: 'Satisfy', cursive;
+}
+.essential-oils, .cosmetics, .healthy-environment {
+	margin-top: 20px;
+	margin-bottom: 40px;
+	max-width: 1200px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 25px;
+    padding-right: 25px;
+}
+.text-center {
+	text-align: center;
+}
+/*------------------------------------------------Header and Footer-------------------------------------------------------*/
 header, footer {
-    text-align: center;
 	font-family: 'Montserrat', sans-serif;
 }
+/*------------------------------------------------------Header------------------------------------------------------------*/
 nav {
 	background: #FCEABE;
 	height: 155px;
 	color: #CC7809;
 	font-size: 0.8em;
 }
-
 nav li {
 	display: inline-block;
 	min-width: 80px;
 	height: 18px;
     margin: 85px 0 0 1em;
 }
-
 nav .logo {
 	width: 170px;
 	margin-top: -85px;
@@ -26,7 +52,7 @@ nav .container {
 	max-width: 900px;
 }
 .top-header {
-	height: 36px;
+	height: 40px;
 	background: #F7F7F5;
 	font-size: 0.7em;
 }
@@ -35,7 +61,7 @@ nav .container {
     color: #9D9E9E;
     min-width: 60px;
 }
-
+/*------------------------------------------------------Footer------------------------------------------------------------*/
 footer {
 	min-height: 100px;
 	background: #FFF5B0;
