@@ -86,3 +86,14 @@ footer h3 {
 	font-size: 0.6em;
 	margin: 20px;
 }
+
+/*------------------------------------------------------Jumbotron---------------------------------------------------------*/
+
+.jumbotron {
+	height: 250px;
+	background-image: url(https://thepienotes.files.wordpress.com/2014/05/wpid-wallpaper-of-lavender-field.jpeg);
+	background-size: cover;
+	background-position: center;
+	margin-bottom: 25px;
+	color: white;
+}

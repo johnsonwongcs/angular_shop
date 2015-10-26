@@ -1,8 +1,9 @@
-<div class="container">
+<div class ="jumbotron" "container">
 	<div class="row">
-		<div class ="twelve columns"><h1 style="text-center">Welcome to Essential Earth</h1></div>
+		<div class ="twelve columns"><h1 class="text-center">Welcome to Essential Earth</h1></div>
 	</div>
-
+</div>
+<div class="container">
 	<div class="row" ng-repeat="product in Ctrl.products">
 		<button ng-click="Ctrl.goToProduct(product)">{{product.name}}</button>
 		{{product.description}}
