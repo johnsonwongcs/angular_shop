@@ -14,6 +14,7 @@ app.config(function($routeProvider,$httpProvider){
 	.when('/shop',{
 		templateUrl:'templates/shop.html',
 		controller:'ShopCtrl as Ctrl'
+	})
 
 	.when('/product/:productId',{
 		templateUrl:'templates/product.html',
