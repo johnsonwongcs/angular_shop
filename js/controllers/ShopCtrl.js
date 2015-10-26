@@ -1,6 +1,6 @@
 app.controller('ShopCtrl',ShopCtrl);
 
-function ProductCtrl(){
+function ShopCtrl(){
 
 }
 ShopCtrl.prototype.addProduct = function(){
