@@ -3,8 +3,8 @@
 		<div class ="twelve columns"><h1 style="text-center">Welcome to Essential Earth</h1></div>
 	</div>
 
-	<div class="row" ng-repeat="product in Ctrl.products" ng-click="Ctrl.goToProduct(product)">
-	{{product.name}}
-	{{product.description}}
+	<div class="row" ng-repeat="product in Ctrl.products">
+		<button ng-click="Ctrl.goToProduct(product)">{{product.name}}</button>
+		{{product.description}}
 	</div>
 </div>
