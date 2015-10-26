@@ -41,6 +41,7 @@ ProductService.prototype.addProduct = function(product){
 	return this.api.request('/newproduct',product,'POST')
 			.then(function(response){
 				var entry = response.data;
+				console.log(entry);
 				var existingEntries = [];
 
 				existingEntries = JSON.parse(localStorage.getItem("products"));
@@ -49,6 +50,10 @@ ProductService.prototype.addProduct = function(product){
 	 			
 	 			localStorage.setItem('products', JSON.stringify(existingEntries));
 			});
-
-
+}
+ProductService.prototype.getProduct = function(productId){
+	console.log(this.products);
+	this.products = JSON.parse(this.products);
+	return this.products.filter(function(product) {return product.productId === productId})[0];
+	console.log(productid);
 }
