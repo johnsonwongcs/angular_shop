@@ -10,9 +10,16 @@ app.config(function($routeProvider,$httpProvider){
 				}
 			}
 	})
+
 	.when('/shop',{
 		templateUrl:'templates/shop.html',
 		controller:'ShopCtrl as Ctrl'
+	})
+
+	.when('/product/:productId',{
+		templateUrl:'templates/product.html',
+		controller:'ProductPageCtrl as Ctrl'
+
 	})
 	.when('/login',{
 		templateUrl:'templates/login.html',
@@ -34,6 +41,10 @@ app.config(function($routeProvider,$httpProvider){
 	})
 	.when('/add_product',{
 		templateUrl:'templates/add_product.html',
+		controller:'ProductCtrl as Ctrl'
+	})
+	.when('/edit_product',{
+		templateUrl:'templates/edit_product.html',
 		controller:'ProductCtrl as Ctrl'
 	})
 	.when('/checkout',{
