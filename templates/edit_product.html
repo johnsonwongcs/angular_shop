@@ -1,9 +1,14 @@
 <h1>
-	Add Product
+	Edit Product
 </h1>
 <div class="row">
+	<div class="three colums">
+		<form ng-sumit="Ctrl.findEditProduct(productID)">
+			<input type="text" ng-model="productID" placeholder="product ID">
+		</form>
+	</div>
 	<div class="three columns">
-		<form ng-submit="Ctrl.addProduct(name,description,image,price,category,quantity,status)">
+		<form ng-submit="Ctrl.saveProduct(name,description,image,price,category,quantity,status)">
 			<input type="text" ng-model="name" placeholder="name">
 			<input type="text" ng-model="image" placeholder="image url">
 			<textarea ng-model="description" placeholder="description"></textarea>
@@ -15,7 +20,7 @@
 					<option value="active">Active</option>
 					<option value="inactive">Inactive</option>
 			</select>
-			<button>Add Product</button>
+			<button>Edit Product</button>
 			<button ng-click="Ctrl.productService.getProducts()">Get Product</button>
 		</form>
 	</div>
