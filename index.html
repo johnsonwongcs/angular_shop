@@ -1,29 +1,91 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<link rel="stylesheet" type="text/css" href="css/vendor/normalize.css">
-	<link rel="stylesheet" type="text/css" href="css/vendor/skeleton.css">
-	<link rel="stylesheet" type="text/css" href="css/app.css">
-	<title></title>
-	<!-- Angular Vendor Dependencies -->
-	<script type="text/javascript" src="js/vendor/angular.min.js"></script>
-	<script type="text/javascript" src="js/vendor/angular-route.min.js"></script>
-
-	<!-- App Code -->
-	<script type="text/javascript" src="app.js"></script>
-	<!-- Controllers -->
-	<script type="text/javascript" src="js/controllers/MainCtrl.js"></script>
-	<script type="text/javascript" src="js/controllers/AdminCtrl.js"></script>
-	<script type="text/javascript" src="js/controllers/AuthCtrl.js"></script>
-	<script type="text/javascript" src="js/controllers/ProductCtrl.js"></script>
-	<!-- Services -->
-	<script type="text/javascript" src="js/services/ApiService.js"></script>
-	<script type="text/javascript" src="js/services/ProductService.js"></script>
-	<!-- Filters -->
-
-	<!-- Directives -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/vendor/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/vendor/skeleton.css">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <title></title>
+    <!-- Angular Vendor Dependencies -->
+    <script type="text/javascript" src="js/vendor/angular.min.js"></script>
+    <script type="text/javascript" src="js/vendor/angular-route.min.js"></script>
+    <!-- App Code -->
+    <script type="text/javascript" src="app.js"></script>
+    <!-- Controllers -->
+    <script type="text/javascript" src="js/controllers/MainCtrl.js"></script>
+    <script type="text/javascript" src="js/controllers/AdminCtrl.js"></script>
+    <script type="text/javascript" src="js/controllers/AuthCtrl.js"></script>
+    <script type="text/javascript" src="js/controllers/ProductCtrl.js"></script>
+    <!-- Services -->
+    <script type="text/javascript" src="js/services/ApiService.js"></script>
+    <script type="text/javascript" src="js/services/ProductService.js"></script>
+    <!-- Filters -->
+    <!-- Directives -->
 </head>
+
 <body ng-app="ShopApp">
-	<ng-view></ng-view>
+    <header>
+        <div class="top-header">
+            <div class="container" class="row">
+                <ul>
+                    <li>Social Media Icons</li>
+                    <li>Admin</li>
+                    <li>Cart</li>
+                    <li>Total Price</li>
+                </ul>
+            </div>
+        </div>
+        <div class="mid-header">
+            <nav>
+                <div class="container">
+                    <ul>
+                        <li>About Us</li>
+                        <li>Shop</li>
+                        <li>Ingredients</li>
+                        <li class="logo">
+                            <img src="css/images/logo.svg">
+                        </li>
+                        <li>FAQ</li>
+                        <li>Blog</li>
+                        <li>Contact</li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <ng-view></ng-view>
+    <footer>
+        <div class='container'>
+            <div class='social-media'>
+            	<h3>Follow Us:</h3>
+            	<ul>
+            		<li>Instagram</li>
+            		<li>Twitter</li>
+            		<li>Facebook</li>
+            		<li>YouTube</li>
+            	</ul>
+            </div>
+
+            <div class='contact'>
+            	<h3>Contact</h3>
+            	<li>
+            		<span class='contact-label'>ADDRESS:</span>
+            		<span class='contact-data'>155 Carlton Street, M5A 2K5, Toronto, ON, Canada</span>
+            	</li>
+            	<li>
+            		<span class='contact-label'>TEL.:</span>
+            		<span class='contact-data'>(+1)416-859-5097</span>
+            	</li>
+            	<li>
+            		<span class='contact-label'>EMAIL:</span>
+            		<span class='contact-data'>info@essentialearth.com</span>
+            	</li>
+
+            </div>
+            <div class="copyright">Copyright &copy 2015  Essential Earth. All rights reserved. Privacy Policy</div>
+        </div>
+    </footer>
 </body>
+
 </html>
