@@ -53,11 +53,12 @@ ProductCtrl.prototype.saveProduct = function(name, description, image, price, ca
 		status:status,
 	}
 	this.products[this.index] = saveProduct;
+	console.log(this.products);
 	//Update localStorage
 	localStorage.setItem('products', JSON.stringify(this.products));
 	//Update server product
 	return this.api.request('/editproduct/'+self.editProduct.productId,sendProduct,'POST')
 			.then(function(response){
 				console.log(response);
-			});		
+			});
 }
