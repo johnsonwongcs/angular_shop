@@ -1,11 +1,32 @@
-<div class ="jumbotron" "container">
-	<div class="row">
-		<div class ="twelve columns"><h1 class="text-center">Welcome to Essential Earth</h1></div>
+<!-- Jumbotron -->
+<div class ="jumbotron">
+	<div class= "jumbotron_cover">
+		<div class="container">
+			<div class="row">
+				<div class ="twelve columns"><h1 class="text-center welcome">Welcome to Essential Earth</h1></div>
+			</div>
+		</div>
 	</div>
 </div>
+
+<!-- Content Block -->
+
+<div class="container block">
+	<div clas="row">
+		<div class="four columns text-center"> "This is some kind of random from a review on our website"</div>
+		<div class="four columns text-center"> "This is some kind of random from a review on our website"</div>
+		<div class="four columns text-center"> "This is some kind of random from a review on our website"</div>
+	</div>
+</div>
+
+
+<!-- Products Listing -->
 <div class="container">
-	<div class="row" ng-repeat="product in Ctrl.products">
-		<button ng-click="Ctrl.goToProduct(product)">{{product.name}}</button>
-		{{product.description}}
+	<div class="row">
+		<div class="four columns" ng-repeat="product in Ctrl.products | limitTo:3">
+			<img src="css/images/balsam_fir.jpg" class="twelve columns u-max-full-width">
+			<div class="twelve columns text-center"><button ng-click="Ctrl.goToProduct(product)">{{product.name}}</button></div>
+			<div class="twelve columns text-center">{{product.description}}</div>
+		</div>
 	</div>
 </div>

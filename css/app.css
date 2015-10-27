@@ -87,13 +87,32 @@ footer h3 {
 	margin: 20px;
 }
 
-/*------------------------------------------------------Jumbotron---------------------------------------------------------*/
+/*------------------------------------------------------Home Page---------------------------------------------------------*/
+
+.welcome{
+/*	opacity: 100;*/
+	color: black;
+}
+
+.jumbotron_cover {
+  height: 250px;
+  background-color: #FFF5B0;
+  opacity: 0.5;
+  position: static;
+  top: 250px;
+  min-width: 100%;
+  z-index: -50;
+}
 
 .jumbotron {
 	height: 250px;
-	background-image: url(https://thepienotes.files.wordpress.com/2014/05/wpid-wallpaper-of-lavender-field.jpeg);
+	background-image: url(/css/images/two-1.png);
 	background-size: cover;
 	background-position: center;
 	margin-bottom: 25px;
-	color: white;
+}
+
+.block {
+	margin-bottom: 100px;
+	margin-top: 100px;
 }
