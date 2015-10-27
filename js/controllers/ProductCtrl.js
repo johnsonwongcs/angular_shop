@@ -25,9 +25,7 @@ ProductCtrl.prototype.addProduct = function(name,description,image,price,categor
 
 }
 ProductCtrl.prototype.findEditProduct = function(productId){
-	console.log('here'+productId);
 	this.editProduct = this.productService.getProduct(productId);
-	console.log(this.editProduct.productId);
 	self = this;
 	this.index = _.findIndex(this.products, function(product){
 		return product.productId == self.editProduct.productId;
@@ -55,7 +53,6 @@ ProductCtrl.prototype.saveProduct = function(name, description, image, price, ca
 		status:status,
 	}
 	this.products[this.index] = saveProduct;
-	console.log(this.products[this.index]);
 	//Update localStorage
 	localStorage.setItem('products', JSON.stringify(this.products));
 	//Update server product

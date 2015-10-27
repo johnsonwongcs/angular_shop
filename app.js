@@ -51,6 +51,10 @@ app.config(function($routeProvider,$httpProvider){
 		templateUrl:'templates/checkout.html',
 		controller:'CheckoutCtrl as Ctrl'
 	})
+	.when('/confirmation',{
+		templateUrl:'templates/confirmation.html',
+		controller:'ConfirmationCtrl as Ctrl'
+	})
 	.otherwise({
 		redirectTo:'/'
 	});
