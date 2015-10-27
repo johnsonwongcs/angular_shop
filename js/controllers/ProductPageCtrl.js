@@ -5,23 +5,23 @@ function ProductPageCtrl(productService, $routeParams){
 	this.productId = $routeParams.productId;
 	this.cart = JSON.parse(localStorage.getItem('Cart'));
 	if(this.cart == null){
-		this.cart = {};
-		this.cart.products = [];
+		this.cart = [];
 	}
 
 	this.product = productService.getProduct(this.productId);
 }
 ProductPageCtrl.prototype.addToCart = function(product, orderQuantity){
 	var duplicate = false;
-	for (var i=0;i<this.cart.products.length;i++){
-		if (this.cart.products[i].productId == product.productId){
-			this.cart.products[i].orderQuantity += orderQuantity;
+	for (var i=0;i<this.cart.length;i++){
+		if (this.cart[i].productId == product.productId){
+			this.cart[i].orderQuantity += orderQuantity;
 			duplicate = true;
 		}
 	};
 	if (duplicate == false) {
 		product.orderQuantity = orderQuantity;
-		this.cart.products.push(product);
+		this.cart.push(product);
 	}
 	localStorage.setItem('Cart', JSON.stringify(this.cart));
 }
+
