@@ -1,28 +1,8 @@
-/*  .one.column,
-  .one.columns                    { background: rgb(0, 204, 255); }
-  .two.columns                    { background: #af3d0b; }
-  .three.columns                  { background: #d34459; }
-  .four.columns                   { background: #b7b339; }
-  .five.columns                   { background: #e87e54; }
-  .six.columns                    { background: #fdb3bd; }
-  .seven.columns                  { background: #f7b284; }
-  .eight.columns                  { background: #fff5b0; }
-  .nine.columns                   { background: #f9f7dc; }
-  .ten.columns                    { background: #b7b; }
-  .eleven.columns                 { background: rgb(0, 255, 11);}
-  .twelve.columns                 { background: rgb(0, 255, 13); }
 
-  .one-third.column               { background: rgb(0, 25, 13); }
-  .two-thirds.column              { background: rgb(0, 55, 15); }
-
-  .one-half.column                { background: rgb(0, 25, 13); }*/
   .savioImage {
     margin-top: 60px;
-    /*background: #af3d0b;*/
   }
-  img .savioImage {
-    width: 100%;
-  }
+
   .fitMargin {
     padding-left: 20px;
     margin: 0;
@@ -31,33 +11,12 @@
   .pictureCart{
     height: 150px;
     width: 150px;
-
-  }
- 
-  .savioName {
-    background: #af3d0b;
-  }
-  .savioDescription {
-    background: #d34459;
-  }
-  .savioQuality {
-    background: #b7b339;
-  }
-  .savioStatus {
-    background: #e87e54;
-  }
-  .savioPrice {
-    background: #fdb3bd;
-  }
-  .savioWidth {
-    width: 85%;
-    margin: 0 auto;
   }
     #quantity input {
     width: 50%;
     padding-left: 20px;
   }
-  button {
-    height: 85px;
-    width: 55px;
+  button .svgCart {
+    height: 100px;
+    width: 100px;
   }

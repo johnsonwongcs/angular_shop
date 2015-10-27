@@ -4,42 +4,42 @@
 
 				<div class='four columns'>
 					<img class="twelve columns image savioImage" src="img/bottle1.jpg">
-					<h1>H1 TAG</h1>
-					<h2>H2 TAG</h2>
-					<h3>H3 TAG</h3>
-					<h4>H4 TAG</h4>
-					<h5>H5 TAG</h5>
-					<h6>H6 TAG</h6>
-					<p>p TAG</p>
 
 				</div>
 
 				<div class='eight columns'>
 					<div class='row carts'>
-						<div class='twelve columns contact' id='name'><h3>Name : {{Ctrl.product.name}}</h3></div>
+						<div class='twelve columns contact' id='name'><h3>Name : {{Ctrl.product.name}}</h3>
+					</div>
+
 					<div class='twelve columns contact' id='description'>
 						<h3>Description : {{Ctrl.product.description}}</h3>
 					</div>
-					<div class='four columns u-pull-right contact fitMargin fitPadding' id='input_quantity'><h2>Quantity</h2>
-						
-						<input type='button' value='-' id='moins' 
-						ng-click='Ctrl.minus()'>
 
-						<input type='text' size='5' ng-model="Ctrl.orderAmount" ng-init="Ctrl.orderAmount=1">
+					<div class='row'>
 						
-						<input type='button' value='+' id='plus' ng-click="Ctrl.plus()">
+							<div class='eight columns u-pull-right contact fitMargin fitPadding' id='input_quantity'><h2>Quantity</h2>
+								
+								<input type='button' value='-' id='moins' 
+								ng-click='Ctrl.minus()'>
+
+								<input type='text' size='5' ng-model="Ctrl.orderAmount" ng-init="Ctrl.orderAmount=1">
+								
+								<input type='button' value='+' id='plus' ng-click="Ctrl.plus()">
+									
+							</div>
 							
+							<h2 class='eight columns u-pull-right contact fitMargin' id='status'>status: {{Ctrl.product.status}}</h2>
+							
+							<h2 class='eight columns u-pull-right contact fitMargin' id='price' placeholder='total price'>price: {{Ctrl.product.price}}</h2>
+
 					</div>
-					
-					<h2 class='four columns u-pull-right contact fitMargin' id='status'>status: {{Ctrl.product.status}}</h2>
-					
-					<h2 class='four columns u-pull-right contact fitMargin' id='price' placeholder='total price'>price: {{Ctrl.product.price}}</h2>
+
 					<div class="row">
 						<button class="cart three columns u-pull-left" ng-click="Ctrl.addToCart(Ctrl.product, orderQuantity)">
-							<!-- <h2>ADD2cart</h2> -->
-							<img class='' src='img/cart.svg'>
+							<img class='svgCart' src='img/cart.svg'>
 						</button>
 					</div>
-				</div>
-			</div>
-		</div>
+				</div><!--END class='four columns'' -->
+			</div><!--END class='savioWidth' -->
+		</div><!--END Class="row" -->
