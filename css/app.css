@@ -18,6 +18,7 @@ h2 {
 }
 h3 {
 	font-family: 'Satisfy', cursive;
+	color: #AF4B08;
 }
 /*------------------------------------------------Header and Footer-------------------------------------------------------*/
 header, footer {
@@ -37,6 +38,11 @@ header, footer {
 	font-size: 1em;
 	background: #CC7809 url(http://s3.postimg.org/6msqgtoxr/decoration.png) top center repeat-x;
     background-size: 13px 3px;
+}
+input[type="text"] {
+	margin-top: 5px;
+	background-color: #F7F7F5;
+	width: 150px;
 }
 nav {
 
@@ -75,12 +81,17 @@ nav .container {
 	margin: 0px;
 	padding: 0px;
 	border: 0px;
+	color: #9D9E9E;
+}
+.top-header .container {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
 }
 .top-header li {
 	padding: 7px;
 	/*bottom: 20px;*/
 	display: inline-block;
-    color: #9D9E9E;
     min-width: 60px;
     margin-bottom: 0px;
 }
@@ -91,9 +102,6 @@ footer {
 	color: #CC7809;
 	font-size: 0.8em;
 	/*margin-top: 130px;*/
-}
-.container{
-	max-width: 1000px;
 }
 footer h3 {
 	font-size: 1.2em;
@@ -142,6 +150,7 @@ footer h3 {
 	text-align: center;
 	margin-top: -15px;
 	color: #0CC8F4;
+	font-size: 1.2em;
 }
 .shop .content {
 	padding: 20px; 
@@ -160,7 +169,42 @@ footer h3 {
 .product-box {
 	height: 250px;
 	width: 250px;
-	background: #8E8E8E;
+	background: white;
 	margin-right: auto;
 	margin-left: auto;
+	position: relative;
+}
+.product-box img {
+	width: 210px;
+	height: 210px;
+	margin-top: 20px;
+}
+.test {
+	width: 250px;
+	height: 250px;
+	background: #F2C875;
+	opacity: 0.5;
+	position: absolute;
+}
+.product-box h3 {
+	position: absolute;
+	margin-top: 10%;
+	z-index: 15;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+label, input {
+	display: inline-block;
+	margin-right: 10px;
+}
+.arrow-left img {
+	height: 60px;
+	position: absolute;
+	top: 50%;
+	margin-left: 20px;
+    right: 97%;
+}
+/*------------------------------------------------------@media------------------------------------------------------------*/
+@media (min-width: 750px) {
+
 }
