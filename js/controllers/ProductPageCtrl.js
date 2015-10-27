@@ -30,9 +30,8 @@ ProductPageCtrl.prototype.addToCart = function(product, orderQuantity){
 
 ProductPageCtrl.prototype.plus = function() {
 
-	console.log(this.orderAmount);
+	// console.log(this.orderAmount);
 	this.orderAmount++;	
-	console.log(this.orderAmount);
 
 }
 ProductPageCtrl.prototype.minus = function() {

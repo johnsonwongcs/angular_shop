@@ -4,14 +4,21 @@
 
 				<div class='four columns'>
 					<img class="twelve columns image savioImage" src="img/bottle1.jpg">
+					<h1>H1 TAG</h1>
+					<h2>H2 TAG</h2>
+					<h3>H3 TAG</h3>
+					<h4>H4 TAG</h4>
+					<h5>H5 TAG</h5>
+					<h6>H6 TAG</h6>
+					<p>p TAG</p>
+
 				</div>
 
 				<div class='eight columns'>
 					<div class='row carts'>
-						<h2 class='twelve columns contact' id='name'>name: {{Ctrl.product.name}}</h2>
+						<div class='twelve columns contact' id='name'><h3>Name : {{Ctrl.product.name}}</h3></div>
 					<div class='twelve columns contact' id='description'>
-						<h2>description:</h2>
-						<p>{{Ctrl.product.description}}</p>
+						<h3>Description : {{Ctrl.product.description}}</h3>
 					</div>
 					<div class='four columns u-pull-right contact fitMargin fitPadding' id='input_quantity'><h2>Quantity</h2>
 						
@@ -23,7 +30,7 @@
 						<input type='button' value='+' id='plus' ng-click="Ctrl.plus()">
 							
 					</div>
-				
+					
 					<h2 class='four columns u-pull-right contact fitMargin' id='status'>status: {{Ctrl.product.status}}</h2>
 					
 					<h2 class='four columns u-pull-right contact fitMargin' id='price' placeholder='total price'>price: {{Ctrl.product.price}}</h2>
