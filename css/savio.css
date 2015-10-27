@@ -2,11 +2,14 @@
   .savioImage {
     margin-top: 60px;
   }
-
+  .savioWidth #name {
+    background: #f9f7dc;
+    padding-top: 20px;
+  }
   .fitMargin {
-    padding-left: 20px;
+    padding-left: 30px;
     margin: 0;
-    background: rgba(175, 61, 11, 0.33);
+    background: #f9f7dc;
   }
   .pictureCart{
     height: 150px;
@@ -19,4 +22,11 @@
   button .svgCart {
     height: 100px;
     width: 100px;
+    padding: 0;
+  }
+  .savioWidth button {
+    position: relative;
+    bottom: 100px;
+    border: none;
+    background: none;
   }
