@@ -1,3 +1,6 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    display: block;
+}
 body{
 	font-family: 'Source Sans Pro', sans-serif;
 }
@@ -6,9 +9,12 @@ ul {
 }
 h2 {
 	font-size: 2em;
-	color: #CC7809;
+	color: #753616;
 	border-bottom: 1px solid #F2C875;
-	text-transform: capitalize;
+	text-transform: uppercase;
+	margin-bottom: 0px;
+	padding-bottom: 5px;
+	font-family: 'Montserrat', sans-serif;
 }
 h3 {
 	font-family: 'Satisfy', cursive;
@@ -25,41 +31,90 @@ h3 {
 .text-center {
 	text-align: center;
 }
+.main {
+	margin-top: 40px;
+	top: 240px;
+	z-index: 10;
+	min-width: 100%;
+    padding-top: 191px;
+}
+.shop li {
+	text-align: center;
+	margin-top: -15px;
+	color: #0CC8F4;
+}
+.shop .content {
+	background: #F7F7F5;
+	min-height: 200px; 
+}
+.arrow {
+	height: 40px;
+}
+.products li {
+	font-family: 'Satisfy', cursive;
+}
 /*------------------------------------------------Header and Footer-------------------------------------------------------*/
 header, footer {
 	font-family: 'Montserrat', sans-serif;
 }
 /*------------------------------------------------------Header------------------------------------------------------------*/
+.mid-header{
+	position: fixed;
+    top: 36px;
+    z-index: 15;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 0;
+    height: 155px;
+    background: #CC7809;
+	color: #F7F7F5;
+	font-size: 1em;
+}
 nav {
-	background: #FCEABE;
-	height: 155px;
-	color: #CC7809;
-	font-size: 0.8em;
+
 }
 nav li {
 	display: inline-block;
-	min-width: 80px;
-	height: 18px;
+	/*min-width: 70px;*/
+	/*height: 18px;*/
     margin: 85px 0 0 1em;
+    text-align: center;
 }
 nav .logo {
-	width: 170px;
-	margin-top: -85px;
-	vertical-align: text-top;
-	/*background: url(http://postimg.org/image/r7wib0e9x/) top center repeat-x;*/
+	width: 155px;
+	margin-top: -25px;
+	vertical-align: text-bottom;
+	/*background: url(http://s18.postimg.org/7kgepktv9/logo.png) center no-repeat;*/
+	z-index: 20px;
+	
+}
+nav .logo img {
+	height: 155px;
 }
 nav .container {
-	max-width: 900px;
+	/*max-width: 960px;*/
+	margin-left: auto;
+	margin-right: auto;
 }
 .top-header {
-	height: 40px;
-	background: #F7F7F5;
+	position: fixed;
+	top: 0;
+	z-index: 15;
+    width: 100%;
+	height: 36px;
+	background: #FCEABE;
 	font-size: 0.7em;
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
 }
 .top-header li {
+	padding: 7px;
+	/*bottom: 20px;*/
 	display: inline-block;
     color: #9D9E9E;
     min-width: 60px;
+    margin-bottom: 0px;
 }
 /*------------------------------------------------------Footer------------------------------------------------------------*/
 footer {
@@ -67,8 +122,9 @@ footer {
 	background: #FFF5B0;
 	color: #CC7809;
 	font-size: 0.8em;
+	/*margin-top: 130px;*/
 }
-footer .container{
+.container{
 	max-width: 1000px;
 }
 footer h3 {
@@ -78,6 +134,9 @@ footer h3 {
 	margin-top: 20px;
 	min-width: 350px;
 	display: inline-block; 
+}
+.contact {
+	margin-left: 0px;
 }
 .social-media {
 	border-right: 1px solid #CC7809;

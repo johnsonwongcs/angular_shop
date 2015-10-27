@@ -1,14 +1,21 @@
-<section>
+<section class="shop">
     <div class="essential-oils row">
         <div class="twelve columns">
             <h2>Essential Oils</h2>
             <div class="row">
                 <ul>
-                    <li class="two columns">Single Oils</li>
+                    <li class="two columns offset-by-one column">Single Oils</li>
                     <li class="two columns">Blends</li>
                     <li class="two columns">Fragnant Oils</li>
                     <li class="two columns">Carrier Oils</li>
                     <li class="two columns">Massage Oils</li>
+                </ul>
+            </div>
+            <div class="row content products">
+            <span><img src="css/images/left_arrow.svg" class="arrow"></span>
+            <ul>
+                <li  ng-repeat="product in Ctrl.products">
+                {{product.name}} {{product.description}}</li>
                 </ul>
             </div>
         </div>
@@ -16,21 +23,31 @@
     <div class="cosmetics row">
         <div class="twelve columns">
             <h2>Cosmetics</h2>
-            <div>
+            <div class="row">
                 <ul>
-                    <li></li>
+                    <li class="two columns offset-by-one column">Body Lotion</li>
+                    <li class="two columns">Skin Balm</li>
+                    <li class="two columns">Lip Balm</li>
+                    <li class="two columns">Hand Cream</li>
+                    <li class="two columns">Shampoo</li>
                 </ul>
             </div>
+            <div class="row content products"></div>
         </div>
     </div>
     <div class="healthy-environment row">
         <div class="twelve columns">
             <h2>Healthy Environment</h2>
-            <div>
+            <div class="row">
                 <ul>
-                    <li></li>
+                    <li class="two columns offset-by-one column">Difusers</li>
+                    <li class="two columns">Nebulizers</li>
+                    <li class="two columns">Lamps</li>
+                    <li class="two columns">Candles</li>
+                    <li class="two columns">Home Sprays</li>
                 </ul>
             </div>
+            <div class="row content products"></div>
         </div>
     </div>
 </section>
