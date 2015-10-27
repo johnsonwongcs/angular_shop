@@ -1,16 +1,44 @@
 		<div class="row">
+
 			<div class='savioWidth'>
+
+				<div class='four columns'>
+					<img class="twelve columns image savioImage" src="img/bottle1.jpg">
+				</div>
+
 				<div class='eight columns'>
 					<div class='row carts'>
-						<h2 class='twelve columns contact' id='name'>
-							name: {{Ctrl.product.name}}</h2>
-						<div class='twelve columns contact' id='description'><h2>description:</h2> <p>{{Ctrl.product.description}}</p></div>	
-						<h2 class='four columns u-pull-right contact fitMargin fitPadding' id='quantity'>quantity <input type="text" ng-model="orderQuantity" ng-init="orderQuantity=1"> </h2>
-						<h2 class='four columns u-pull-right contact fitMargin' id='status'>status: {{Ctrl.product.status}}</h2>
-						<h2 class='four columns u-pull-right contact fitMargin' id='price' placeholder='total price'>price: {{Ctrl.product.price}}</h2>
-						<div class="row">
-							<button class="cart three columns u-pull-left" ng-click="Ctrl.addToCart(Ctrl.product, orderQuantity)"><img class='' src='img/cart.svg'></button>
+						<h2 class='twelve columns contact' id='name'>name: {{Ctrl.product.name}}</h2>
+					<div class='twelve columns contact' id='description'>
+						<h2>description:</h2>
+						<p>{{Ctrl.product.description}}</p>
+					</div>
+					<div class='four columns u-pull-right contact fitMargin fitPadding' id='input_quantity'><h2>Quantity</h2>
+						<input type='text' size='5' value='0' id='1quantity' ng-model="orderQuantity" ng-init="orderQuantity=1">
+						<input type='button' value='-' id='moins' onClick='minus()'>
+						<input type='button' value='+' id='plus' onClick='plus()'>
+							<script type="text/javascript">
+								var quantity = 0;
+								var quantityEl = document.getElementById('1quantity'); // makes it available
+								function plus(){
+									quantity++;
+									quantityEl.value = quantity;
+								}
+								function minus(){
+									quantity--;
+									quantityEl.value = quantity;
+								}
+							</script>
 						</div>
+				
+					<h2 class='four columns u-pull-right contact fitMargin' id='status'>status: {{Ctrl.product.status}}</h2>
+					
+					<h2 class='four columns u-pull-right contact fitMargin' id='price' placeholder='total price'>price: {{Ctrl.product.price}}</h2>
+					<div class="row">
+						<button class="cart three columns u-pull-left" ng-click="Ctrl.addToCart(Ctrl.product, orderQuantity)">
+							<!-- <h2>ADD2cart</h2> -->
+							<img class='' src='img/cart.svg'>
+						</button>
 					</div>
 				</div>
 			</div>
