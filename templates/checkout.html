@@ -1,0 +1,22 @@
+<table>
+	<tr>
+		<td>Name</td>
+		<td>Description</td>
+		<td>Category</td>
+		<td>Quantity</td>
+		<td>Price</td>
+	</tr>
+    <tr ng-repeat="product in Ctrl.Cart.products">
+        <td>{{product.name}}</td>
+        <td>{{product.description}}</td> 
+        <td>{{product.category}}</td> 
+        <td>{{product.orderQuantity}}</td>
+        <td>{{product.price}}</td>
+    </tr>
+</table>
+
+<div>
+Subtotal: {{Ctrl.subtotal}}
+Tax: {{Ctrl.tax}}
+Total: {{Ctrl.total}}
+</div>
