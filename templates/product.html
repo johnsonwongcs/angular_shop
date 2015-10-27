@@ -1,45 +1,16 @@
 		<div class="row">
-
 			<div class='savioWidth'>
-
-				<div class='four columns'>
-
-					<img class="twelve columns image savioImage" src="img/bottle1.jpg">
-					<!--<img class="image" src="img/image.png">-->
-							<!--<p> name:' ',</P>
-							<p> description:' ',</p>
-							<p> image:' ',</P>
-							<p> category:' ',</P>
-							<p> price:' ',</P>
-							<p> quantity:' ',</p>
-							<p> status:' ',</p> 
-
-						cart.svg
-						-->
-				</div>
-
 				<div class='eight columns'>
-
 					<div class='row carts'>
 						<h2 class='twelve columns contact' id='name'>
 							name: {{Ctrl.product.name}}</h2>
-			
-						<div class='twelve columns contact' id='description'><h2>description:</h2> <p>{{Ctrl.product.description}}</p></div>
-					
-					
-						<h2 class='four columns u-pull-right contact fitMargin fitPadding' id='quantity'>quantity <input type="text"> </h2>
-					
+						<div class='twelve columns contact' id='description'><h2>description:</h2> <p>{{Ctrl.product.description}}</p></div>	
+						<h2 class='four columns u-pull-right contact fitMargin fitPadding' id='quantity'>quantity <input type="text" ng-model="orderQuantity" ng-init="orderQuantity=1"> </h2>
 						<h2 class='four columns u-pull-right contact fitMargin' id='status'>status: {{Ctrl.product.status}}</h2>
-						
 						<h2 class='four columns u-pull-right contact fitMargin' id='price' placeholder='total price'>price: {{Ctrl.product.price}}</h2>
 						<div class="row">
-							<button class="cart three columns u-pull-left">
-								<!-- <h2>ADD2cart</h2> -->
-								<img class='' src='img/cart.svg'>
-							</button>
+							<button class="cart three columns u-pull-left" ng-click="Ctrl.addToCart(Ctrl.product, orderQuantity)"><img class='' src='img/cart.svg'></button>
 						</div>
-						<!--<button class="three columns u-pull-left ">ADD2CART</button>
-						 ADD TO CART BUTTON -->
 					</div>
 				</div>
 			</div>
