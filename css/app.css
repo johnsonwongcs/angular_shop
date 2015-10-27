@@ -19,40 +19,6 @@ h2 {
 h3 {
 	font-family: 'Satisfy', cursive;
 }
-.essential-oils, .cosmetics, .healthy-environment {
-	margin-top: 20px;
-	margin-bottom: 40px;
-	max-width: 1200px;
-	margin-right: auto;
-	margin-left: auto;
-	padding-left: 25px;
-    padding-right: 25px;
-}
-.text-center {
-	text-align: center;
-}
-.main {
-	margin-top: 40px;
-	top: 240px;
-	z-index: 10;
-	min-width: 100%;
-    padding-top: 191px;
-}
-.shop li {
-	text-align: center;
-	margin-top: -15px;
-	color: #0CC8F4;
-}
-.shop .content {
-	background: #F7F7F5;
-	min-height: 200px; 
-}
-.arrow {
-	height: 40px;
-}
-.products li {
-	font-family: 'Satisfy', cursive;
-}
 /*------------------------------------------------Header and Footer-------------------------------------------------------*/
 header, footer {
 	font-family: 'Montserrat', sans-serif;
@@ -69,6 +35,8 @@ header, footer {
     background: #CC7809;
 	color: #F7F7F5;
 	font-size: 1em;
+	background: #CC7809 url(http://s3.postimg.org/6msqgtoxr/decoration.png) top center repeat-x;
+    background-size: 13px 3px;
 }
 nav {
 
@@ -144,4 +112,55 @@ footer h3 {
 .copyright {
 	font-size: 0.6em;
 	margin: 20px;
+}
+/*------------------------------------------------------Shop------------------------------------------------------------*/
+.essential-oils, .cosmetics, .healthy-environment {
+	margin-top: 20px;
+	margin-bottom: 40px;
+	max-width: 1200px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 25px;
+    padding-right: 25px;
+}
+.text-center {
+	text-align: center;
+}
+.main {
+	margin-top: 40px;
+	top: 240px;
+	z-index: 10;
+	min-width: 100%;
+    padding-top: 191px;
+}
+.main .container {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+}
+.shop li {
+	text-align: center;
+	margin-top: -15px;
+	color: #0CC8F4;
+}
+.shop .content {
+	padding: 20px; 
+	background: #F7F7F5;
+}
+.content li {
+	margin-top: 20px;
+}
+.arrow {
+	height: 40px;
+}
+.products li {
+	font-family: 'Satisfy', cursive;
+	color: white;
+}
+.product-box {
+	height: 250px;
+	width: 250px;
+	background: #8E8E8E;
+	margin-right: auto;
+	margin-left: auto;
 }

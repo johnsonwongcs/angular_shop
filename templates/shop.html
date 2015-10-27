@@ -1,5 +1,5 @@
 <section class="shop">
-    <div class="essential-oils row">
+    <div class="essential-oils container">
         <div class="twelve columns">
             <h2>Essential Oils</h2>
             <div class="row">
@@ -12,15 +12,17 @@
                 </ul>
             </div>
             <div class="row content products">
-            <span><img src="css/images/left_arrow.svg" class="arrow"></span>
-            <ul>
-                <li  ng-repeat="product in Ctrl.products">
-                {{product.name}} {{product.description}}</li>
+                <!-- <span><img src="css/images/left_arrow.svg" class="arrow"></span> -->
+                <ul>
+                    <li class='four columns' ng-repeat="randomProduct in Ctrl.randomProducts">
+                        <div class="product-box">
+                        {{randomProduct.name}} {{randomProduct.description}}
+                        </div></li>
                 </ul>
             </div>
         </div>
     </div>
-    <div class="cosmetics row">
+    <div class="cosmetics container">
         <div class="twelve columns">
             <h2>Cosmetics</h2>
             <div class="row">
@@ -32,7 +34,15 @@
                     <li class="two columns">Shampoo</li>
                 </ul>
             </div>
-            <div class="row content products"></div>
+            <div class="row content products">
+                <!-- <span><img src="css/images/left_arrow.svg" class="arrow"></span> -->
+                <ul>
+                    <li class='four columns' ng-repeat="randomProduct in Ctrl.randomProducts">
+                        <div class="product-box">
+                        {{randomProduct.name}} {{randomProduct.description}}
+                        </div></li>
+                </ul>
+            </div>
         </div>
     </div>
     <div class="healthy-environment row">
@@ -47,7 +57,15 @@
                     <li class="two columns">Home Sprays</li>
                 </ul>
             </div>
-            <div class="row content products"></div>
+            <div class="row content products">
+                <!-- <span><img src="css/images/left_arrow.svg" class="arrow"></span> -->
+                <ul>
+                    <li class='four columns' ng-repeat="randomProduct in Ctrl.randomProducts">
+                        <div class="product-box">
+                        {{randomProduct.name}} {{randomProduct.description}}
+                        </div></li>
+                </ul>
+            </div>
         </div>
     </div>
 </section>
