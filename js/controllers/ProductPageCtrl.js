@@ -2,8 +2,23 @@ app.controller('ProductPageCtrl',ProductPageCtrl);
 
 function ProductPageCtrl(productService, $routeParams){
 	this.productService = productService;
-	console.log($routeParams.productId);
 	this.productId = $routeParams.productId;
-	console.log(this.productId);
+	this.cart = {};
+	this.cart.products = [];
 	this.product = productService.getProduct(this.productId);
+}
+ProductPageCtrl.prototype.addToCart = function(product, orderQuantity){
+	var duplicate = false;
+	for (var i=0;i<this.cart.products.length;i++){
+		if (this.cart.products[i].productId == product.productId){
+			this.cart.products[i].orderQuantity += orderQuantity;
+			duplicate = true;
+		}
+	};
+	console.log(duplicate);
+	if (duplicate == false) {
+		product.orderQuantity = orderQuantity;
+		this.cart.products.push(product);
+	}
+	localStorage.setItem('Cart', JSON.stringify(this.cart));
 }

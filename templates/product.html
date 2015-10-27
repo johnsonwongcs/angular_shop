@@ -25,12 +25,12 @@
 				
 				<div class='row'>
 				
-					<div class='four columns' id='quantity'>quantity <input type="text"> </div>
+					<div class='four columns' id='quantity'>quantity <input type="text" ng-model="orderQuantity" ng-init="orderQuantity=1"> </div>
 				
 					<div class='four columns' id='status'>status: {{Ctrl.product.status}}</div>
 					
 					<div class='four columns' id='price' placeholder='total price'>price: {{Ctrl.product.price}}</div>
-					<button class="button button-primary">ADD2CART</button>
+					<button class="button button-primary" ng-click="Ctrl.addToCart(Ctrl.product, orderQuantity)">ADD2CART</button>
 					<!-- ADD TO CART BUTTON -->
 				</div>
 
