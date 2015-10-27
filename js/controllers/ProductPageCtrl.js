@@ -6,7 +6,9 @@ function ProductPageCtrl(productService, $routeParams){
 	this.cart = {};
 	this.cart.products = [];
 	this.product = productService.getProduct(this.productId);
+
 }
+
 ProductPageCtrl.prototype.addToCart = function(product, orderQuantity){
 	var duplicate = false;
 	for (var i=0;i<this.cart.products.length;i++){
@@ -21,4 +23,19 @@ ProductPageCtrl.prototype.addToCart = function(product, orderQuantity){
 		this.cart.products.push(product);
 	}
 	localStorage.setItem('Cart', JSON.stringify(this.cart));
+}
+
+ProductPageCtrl.prototype.plus = function() {
+
+	console.log(this.orderAmount);
+	this.orderAmount++;	
+	console.log(this.orderAmount);
+
+}
+ProductPageCtrl.prototype.minus = function() {
+
+	if (this.orderAmount > 1) {
+		this.orderAmount--;	
+	}
+
 }

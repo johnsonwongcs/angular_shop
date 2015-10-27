@@ -14,22 +14,15 @@
 						<p>{{Ctrl.product.description}}</p>
 					</div>
 					<div class='four columns u-pull-right contact fitMargin fitPadding' id='input_quantity'><h2>Quantity</h2>
-						<input type='text' size='5' value='0' id='1quantity' ng-model="orderQuantity" ng-init="orderQuantity=1">
-						<input type='button' value='-' id='moins' onClick='minus()'>
-						<input type='button' value='+' id='plus' onClick='plus()'>
-							<script type="text/javascript">
-								var quantity = 0;
-								var quantityEl = document.getElementById('1quantity'); // makes it available
-								function plus(){
-									quantity++;
-									quantityEl.value = quantity;
-								}
-								function minus(){
-									quantity--;
-									quantityEl.value = quantity;
-								}
-							</script>
-						</div>
+						
+						<input type='button' value='-' id='moins' 
+						ng-click='Ctrl.minus()'>
+
+						<input type='text' size='5' ng-model="Ctrl.orderAmount" ng-init="Ctrl.orderAmount=1">
+						
+						<input type='button' value='+' id='plus' ng-click="Ctrl.plus()">
+							
+					</div>
 				
 					<h2 class='four columns u-pull-right contact fitMargin' id='status'>status: {{Ctrl.product.status}}</h2>
 					
