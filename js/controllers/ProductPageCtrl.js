@@ -3,8 +3,12 @@ app.controller('ProductPageCtrl',ProductPageCtrl);
 function ProductPageCtrl(productService, $routeParams){
 	this.productService = productService;
 	this.productId = $routeParams.productId;
-	this.cart = {};
-	this.cart.products = [];
+	this.cart = JSON.parse(localStorage.getItem('Cart'));
+	if(this.cart == null){
+		this.cart = {};
+		this.cart.products = [];
+	}
+
 	this.product = productService.getProduct(this.productId);
 
 }
@@ -17,7 +21,6 @@ ProductPageCtrl.prototype.addToCart = function(product, orderQuantity){
 			duplicate = true;
 		}
 	};
-	console.log(duplicate);
 	if (duplicate == false) {
 		product.orderQuantity = orderQuantity;
 		this.cart.products.push(product);
