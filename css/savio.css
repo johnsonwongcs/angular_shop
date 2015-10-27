@@ -3,13 +3,13 @@
     margin-top: 60px;
   }
   .savioWidth #name {
-    background: #f9f7dc;
+    background: rgba(249, 247, 220, 0.50);
     padding-top: 20px;
   }
   .fitMargin {
     padding-left: 30px;
     margin: 0;
-    background: #f9f7dc;
+    background: rgba(249, 247, 220, 0.25);
   }
   .pictureCart{
     height: 150px;
@@ -29,4 +29,11 @@
     bottom: 100px;
     border: none;
     background: none;
+  }
+  #div1  {
+    background: url(../img/lav_feild.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
   }
