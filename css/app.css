@@ -104,7 +104,7 @@ footer {
 	/*margin-top: 130px;*/
 }
 footer h3 {
-	font-size: 1.2em;
+	font-size: 1.6em;
 }
 .social-media, .contact {
 	margin-top: 20px;
@@ -189,7 +189,7 @@ footer h3 {
 .product-box h3 {
 	position: absolute;
 	margin-top: 10%;
-	z-index: 15;
+	z-index: 10;
 	margin-left: 20%;
 	margin-right: 20%;
 }
