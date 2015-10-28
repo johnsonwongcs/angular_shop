@@ -20,10 +20,9 @@
 						
 							<div class='eight columns u-pull-right contact fitMargin fitPadding' id='input_quantity'><h2>Quantity</h2>
 								
-								<input type='button' value='-' id='moins' 
-								ng-click='Ctrl.minus()'>
+								<input type='button' value='-' id='moins' ng-click="Ctrl.minus()">
 
-								<input type='text' size='5' ng-model="Ctrl.orderQuantity">
+								<input type='text' class='plusMoins' size='3' ng-model="Ctrl.orderQuantity">
 								
 								<input type='button' value='+' id='plus' ng-click="Ctrl.plus()">
 									
