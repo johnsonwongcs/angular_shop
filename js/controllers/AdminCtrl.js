@@ -8,7 +8,7 @@ function AdminCtrl(api,productService,$location,products){
 	this.productService = productService;
 	this.products = products;
 	console.log(this.products);
-	this.api.request('/retrieve_orders',{},'GET')
+	this.api.request('/retrieve_orders/team2',{},'GET')
 		.then(function(response){
 			console.log(response);
 		});
