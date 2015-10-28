@@ -23,7 +23,7 @@
 								<input type='button' value='-' id='moins' 
 								ng-click='Ctrl.minus()'>
 
-								<input type='text' size='5' ng-model="Ctrl.orderQuantity">
+								<input type='text' size='5' ng-model="orderQuantity" ng-init="orderQuantity=1">
 								
 								<input type='button' value='+' id='plus' ng-click="Ctrl.plus()">
 									
@@ -31,12 +31,12 @@
 							
 							<h2 class='eight columns u-pull-right contact fitMargin' id='status'>status: {{Ctrl.product.status}}</h2>
 							
-							<h2 class='eight columns u-pull-right contact fitMargin' id='price' orderQuantityplaceholder='total price'>price: {{Ctrl.product.price}}</h2>
+							<h2 class='eight columns u-pull-right contact fitMargin' id='price' placeholder='total price'>price: {{Ctrl.product.price}}</h2>
 
 					</div>
 
 					<div class="row">
-						<button class="cart three columns u-pull-left" ng-click="Ctrl.addToCart(Ctrl.product, Ctrl.orderQuantity)">
+						<button class="cart three columns u-pull-left" ng-click="Ctrl.addToCart(Ctrl.product, orderQuantity)">
 							<img class='svgCart' src='img/cart.svg'>
 						</button>
 					</div>

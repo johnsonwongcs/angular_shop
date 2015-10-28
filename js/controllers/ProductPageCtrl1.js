@@ -4,7 +4,6 @@ function ProductPageCtrl(productService,$routeParams,$location){
 	this.productService = productService;
 	this.productId = $routeParams.productId;
 	this.location = $location;
-	this.orderQuantity = 1;
 	this.cart = JSON.parse(localStorage.getItem('Cart'));
 	if(this.cart == null){
 		this.cart = [];
@@ -35,18 +34,14 @@ ProductPageCtrl.prototype.addToCart = function(product, orderQuantity){
 
 ProductPageCtrl.prototype.plus = function() {
 
-	console.log(this.orderQuantity);
-	this.orderQuantity++;
-	console.log(typeof(this.orderQuantity));
-	console.log(this.orderQuantity);
+	// console.log(this.orderAmount);
+	this.orderAmount++;	
+
 }
 ProductPageCtrl.prototype.minus = function() {
 
-	console.log(this.orderQuantity);
-
-	if (this.orderQuantity > 1) {
-		this.orderQuantity--;	
+	if (this.orderAmount > 1) {
+		this.orderAmount--;	
 	}
-	console.log(this.orderQuantity);
 
 }

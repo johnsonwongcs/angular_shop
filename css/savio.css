@@ -37,3 +37,37 @@
     background-size: cover;
 
   }
+  .savioWidth #plus {
+  background: #f7b284;
+  -webkit-border-radius: -7;
+  -moz-border-radius: -7;
+  border-radius: -7px;
+  font-family: Arial;
+  color: #af3d0b;
+  font-size: 43px;
+  padding: 0px 15px 0px 7px;
+  text-decoration: none;
+}
+
+.savioWidth #plus:hover {
+  background: #3cb0fd;
+
+  text-decoration: none;
+}
+.savioWidth #moins {
+  background: #f7b284;
+  -webkit-border-radius: 7;
+  -moz-border-radius: 7;
+  border-radius: 7px;
+  font-family: Arial;
+  color: #af3d0b;
+  font-size: 43px;
+  padding: 0px 7px 0px 15px;
+  text-decoration: none;
+}
+
+.savioWidth .#moins:hover {
+  background: #3cb0fd;
+
+  text-decoration: none;
+}
