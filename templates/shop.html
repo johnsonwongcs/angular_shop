@@ -25,33 +25,10 @@
                                 <img src="{{product.image}}">
                             </div>
                         </li>
-                        <!--                     <li class='four columns'>
-                        <div class="product-box">
-                            <div class="product" ng-class="{highlight: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
-                                <h3>Balsam Fir</h3>
-                            </div>
-                            <img src="css/images/balsam_fir.jpg">
-                        </div>
-                    </li> -->
-                        <!-- <li class='four columns'>
-                        <div class="product-box">
-                            <div class="product" ng-class="{highlight: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
-                            </div>
-                            <img src="css/images/basil_basic.jpg">
-                        </div>
-                    </li>
-                    <li class='four columns'>
-                        <div class="product-box">
-                        <div class="product" ng-class="{highlight: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
-                            </div>
-                            <img src="css/images/cedarwood.jpg">
-                        </div>
-                    </li> -->
                     </ul>
                 </div>
             </div>
         </div>
-
     </div>
     <div class="cosmetics block">
         <div class="arrow-left"><img src="css/images/left_arrow.svg"></div>
@@ -71,8 +48,12 @@
                 <div class="row content products">
                     <!-- <span><img src="css/images/left_arrow.svg" class="arrow"></span> -->
                     <ul>
-                        <li class='four columns' ng-repeat="randomProduct in Ctrl.randomProducts">
-                            <div class="product-box">
+                        <li class='four columns' ng-repeat="product in Ctrl.products | limitTo:3">
+                            <div class="product-box" ng-click="Ctrl.goToProduct(product)">
+                                <div class="product" ng-class="{highlight: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
+                                    <h3>{{product.name}}</h3>
+                                </div>
+                                <img src="{{product.image}}">
                             </div>
                         </li>
                     </ul>
@@ -98,8 +79,12 @@
                 <div class="row content products">
                     <!-- <span><img src="css/images/left_arrow.svg" class="arrow"></span> -->
                     <ul>
-                        <li class='four columns' ng-repeat="randomProduct in Ctrl.randomProducts">
-                            <div class="product-box">
+                        <li class='four columns' ng-repeat="product in Ctrl.products | limitTo:3">
+                            <div class="product-box" ng-click="Ctrl.goToProduct(product)">
+                                <div class="product" ng-class="{highlight: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
+                                    <h3>{{product.name}}</h3>
+                                </div>
+                                <img src="{{product.image}}">
                             </div>
                         </li>
                     </ul>
