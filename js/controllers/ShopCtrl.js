@@ -7,6 +7,6 @@ function ShopCtrl(productService, products, $location){
 	this.randomProducts = this.products.slice(0,3);
 	console.log(this.randomProducts);
 }
-ShopCtrl.prototype.displayRandom = function(){
-    
+ShopCtrl.prototype.goToProduct = function(product){
+    this.location.path('product/'+product.productId);
 }
