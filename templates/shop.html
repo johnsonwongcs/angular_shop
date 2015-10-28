@@ -17,7 +17,7 @@
                 <div class="row content products">
                     <!-- <span><img src="css/images/left_arrow.svg" class="arrow"></span> -->
                     <ul>
-                        <li class='four columns' ng-repeat="product in Ctrl.products | limitTo:3">
+                        <li class='four columns' ng-repeat='product in Ctrl.products | filter:{category:"Essential Oils"} | limitTo:3'>
                             <div class="product-box" ng-click="Ctrl.goToProduct(product)">
                                 <div class="product" ng-class="{highlight: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
                                     <h3>{{product.name}}</h3>
@@ -48,12 +48,12 @@
                 <div class="row content products">
                     <!-- <span><img src="css/images/left_arrow.svg" class="arrow"></span> -->
                     <ul>
-                        <li class='four columns' ng-repeat="product in Ctrl.products | limitTo:3">
+                        <li class='four columns' ng-repeat='product in Ctrl.products | filter:{category:"Cosmetics"}| limitTo:3'>
                             <div class="product-box" ng-click="Ctrl.goToProduct(product)">
                                 <div class="product" ng-class="{highlight: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
                                     <h3>{{product.name}}</h3>
                                 </div>
-                                <img src="{{product.image}}">
+                                <img ng-src="{{product.image}}">
                             </div>
                         </li>
                     </ul>
@@ -79,7 +79,7 @@
                 <div class="row content products">
                     <!-- <span><img src="css/images/left_arrow.svg" class="arrow"></span> -->
                     <ul>
-                        <li class='four columns' ng-repeat="product in Ctrl.products | limitTo:3">
+                        <li class='four columns' ng-repeat='product in Ctrl.products | filter:{category:"Healthy Environment"} |limitTo:3'>
                             <div class="product-box" ng-click="Ctrl.goToProduct(product)">
                                 <div class="product" ng-class="{highlight: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
                                     <h3>{{product.name}}</h3>
