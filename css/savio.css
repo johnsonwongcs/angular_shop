@@ -23,6 +23,7 @@
     height: 100px;
     width: 100px;
     padding: 0;
+
   }
   .savioWidth button {
     position: relative;
@@ -37,37 +38,32 @@
     background-size: cover;
 
   }
-  .savioWidth #plus {
-  background: #f7b284;
-  -webkit-border-radius: -7;
-  -moz-border-radius: -7;
-  border-radius: -7px;
-  font-family: Arial;
-  color: #af3d0b;
-  font-size: 43px;
-  padding: 0px 15px 0px 7px;
-  text-decoration: none;
-}
+  .savioWidth #input_quantity h2{
+    margin-bottom: 5px;
+  }
+  .plusMoins {
+    margin-bottom: 0px;
+    background-color: none;
+    font-size: 2em;
+    font-family: Arial;
+    width: 40px !important;
+    height:40px !important;
+    color: #696969;
+    border: none;
 
-.savioWidth #plus:hover {
-  background: #3cb0fd;
+  }
+  #plus, #moins {
+    background: rgba(238,232,170, 0.5);
+    margin-bottom: 0;
+    border: none;
+    font-family: Arial;
+    font-size: 3em;
+    color: silver;
+    width: 20px !important;
+  }
 
-  text-decoration: none;
-}
-.savioWidth #moins {
-  background: #f7b284;
-  -webkit-border-radius: 7;
-  -moz-border-radius: 7;
-  border-radius: 7px;
-  font-family: Arial;
-  color: #af3d0b;
-  font-size: 43px;
-  padding: 0px 7px 0px 15px;
-  text-decoration: none;
-}
-
-.savioWidth .#moins:hover {
-  background: #3cb0fd;
-
-  text-decoration: none;
-}
+  #plus:hover, #moins:hover {
+    background: rgba(112,128,144, 0.8);
+    font-size: 2em;
+    color: #E6E6FA ;
+  }

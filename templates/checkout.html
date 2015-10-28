@@ -1,23 +1,67 @@
-<table>
-	<tr>
-		<td>Name</td>
-		<td>Description</td>
-		<td>Category</td>
-		<td>Quantity</td>
-		<td>Price</td>
-	</tr>
-    <tr ng-repeat="product in Ctrl.Cart">
-        <td>{{product.name}}</td>
-        <td>{{product.description}}</td> 
-        <td>{{product.category}}</td> 
-        <td>{{product.orderQuantity}}</td>
-        <td>{{product.price}}</td>
-    </tr>
-</table>
+<!-- Checkout Header -->
 
-<div>
-Subtotal: {{Ctrl.subtotal}}
-Tax: {{Ctrl.tax}}
-Total: {{Ctrl.total}}
+<div class="container">
+	<div class="row">
+		<h2 class="twelve columns">Checkout</h2>
+	</div>
 </div>
-<button class="button button-primary" ng-click="Ctrl.gotoConfirmation()">Checkout</button>
+
+<!-- Product Checkout Details -->
+	<!-- Image Container -->
+
+<div class="container">
+	<div class="row">
+		<div class="four columns" ng-repeat="product in Ctrl.Cart">
+			<img ng-src="{{product.image}}">
+		</div>
+		
+	
+	<!-- Product Details Table -->
+
+		<div class="eight columns">
+			<table class="u-full-width">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+						<th>Category</th>
+						<th>Quantity</th>
+						<th>Price</th>
+					</tr>
+				</thead>
+				<tbody>
+    				<tr ng-repeat="product in Ctrl.Cart">
+        				<td>{{product.name}}</td>
+       					<td>{{product.description}}</td> 
+        				<td>{{product.category}}</td> 
+        				<td>{{product.orderQuantity}}</td>
+        				<td>{{product.price}}</td>
+    				</tr>
+    			</tbody>
+			</table>
+		<div>
+	</div>
+</div>
+</div>
+
+<!--Line Break--><h2> </h2>
+
+<!-- Totals Checkout Section -->
+
+<div class="container">
+	<div class="row text-center">
+		<div class="offset-by-four eight columns">Subtotal: {{Ctrl.subtotal | currency: "$"}}</div>
+		<div class="offset-by-four eight columns">Tax: {{Ctrl.tax | currency: "$"}}</div>
+		<div class="offset-by-four eight columns"><strong>Total: {{Ctrl.total | currency: "$"}}</strong></div>
+	</div>
+</div>
+		
+<!--Line Break--><h2> </h2>
+
+<!--Checkout Button -->
+
+<div class="container">
+	<div class="row text-center">
+		<div class="offset-by-four eight columns"><button class="button button-primary" ng-click="Ctrl.gotoConfirmation()">Checkout</button></div>
+	</div>
+</div>
