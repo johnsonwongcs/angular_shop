@@ -127,6 +127,14 @@ footer h3 {
 .social-media {
 	border-right: 1px solid #CC7809;
 }
+.social-media li {
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 20px
+}
+.social-media li img {
+	max-width: 40px;
+}
 .copyright {
 	font-size: 0.6em;
 	margin: 20px;
