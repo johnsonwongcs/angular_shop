@@ -20,6 +20,13 @@ h3 {
 	font-family: 'Satisfy', cursive;
 	color: #AF4B08;
 }
+a {
+	text-decoration: none;
+	color: inherit;
+}
+a:hover {
+	color: #0CC8F4;
+}
 /*------------------------------------------------Header and Footer-------------------------------------------------------*/
 header, footer {
 	font-family: 'Montserrat', sans-serif;
