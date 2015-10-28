@@ -30,16 +30,16 @@
                 <h2>Featured Products</h2>
                 	<div class="row featured-products">
                   		<div class="four columns" ng-repeat="product in Ctrl.products | limitTo:3">
-                			<div class="product-box">
-                			<h3>{{product.name}}</h3>
-                			<div class="test" ng-click="Ctrl.goToProduct(product)"></div>
-                			<img src="css/images/balsam_fir.jpg">
+                			<div class="row product-box">
+                				<h3 class="twelve columns text-center">{{product.name}}</h3>
+                				<div class="test" ng-click="Ctrl.goToProduct(product)"></div>
+                				<img src="css/images/balsam_fir.jpg">
+                			</div>
                 		</div>
-                	</div>
-            	</div>
-        	</div>
+            		</div>
+        		</div>
+    		</div>
     	</div>
-    </div>
     <div class="container block">
         <div class="twelve columns">
             <h2>From Our Blog</h2>
