@@ -25,7 +25,9 @@
     </div>
     <!-- Products Listing -->
     <div class="product-jumbotron">
+   
         <div class="container">
+        
             <div class="twelve columns">
                 <h2>Featured Products</h2>
                 <div class="row featured-products">
@@ -37,25 +39,16 @@
                 </div>
                 <div class="twelve columns text-center">{{product.description}}</div>
             </div> -->
-                    <ul>
-                        <li class='four columns'>
-                            <div class="product-box">
-                                <img src="css/images/balsam_fir.jpg">
+            <ul>
+                    <li class='four columns' ng-repeat="product in Ctrl.products | limitTo:3">
+                        <div class="product-box" ng-click="Ctrl.goToProduct(product)">
+                            <div class="product" ng-class="{highlight: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
+                                <h3>{{product.name}}</h3>
                             </div>
-                        </li>
-                        <li class='four columns'>
-                            <div class="product-box">
-                                <h3>Basil Basic</h3>
-                                <div class="test"></div>
-                                <img src="css/images/basil_basic.jpg">
-                            </div>
-                        </li>
-                        <li class='four columns'>
-                            <div class="product-box">
-                                <img src="css/images/cedarwood.jpg">
-                            </div>
-                        </li>
-                    </ul>
+                            <img src="{{product.image}}">
+                        </div>
+                    </li>
+            </ul>
                 </div>
             </div>
         </div>

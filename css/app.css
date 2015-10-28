@@ -146,12 +146,13 @@ footer h3 {
 	text-align: center;
 }
 .main {
-	margin-top: 40px;
 	top: 240px;
 	z-index: 10;
 	min-width: 100%;
     padding-top: 191px;
-    /*background-color: white;*/
+}
+.shop {
+	padding-bottom: 60px;
 }
 .shop li {
 	text-align: center;
@@ -201,9 +202,9 @@ footer h3 {
 	position: absolute;
 }
 .highlight h3 {
-	opacity: 1;
+	
 	z-index: 100;
-		position: absolute;
+	position: absolute;
 	margin-top: 10%;
 	margin-left: 20%;
 	margin-right: 20%;
@@ -212,12 +213,22 @@ label, input {
 	display: inline-block;
 	margin-right: 10px;
 }
-.arrow-left img {
-	height: 60px;
-	position: absolute;
-	top: 50%;
-	margin-left: 20px;
-    right: 97%;
+.arrow-left, .arrow-right {
+    position: absolute;
+    top: 60%;
+}
+.arrow-right {
+	    	right: 0%;
+	    	margin-right: 10px;
+}
+.arrow-left {
+	    	margin-left: 10px;
+}
+.arrow-left img{
+	height: 60px;	
+}
+.arrow-right img {
+	height: 60px;	
 }
 /*------------------------------------------------------@media------------------------------------------------------------*/
 @media (min-width: 750px) {
@@ -264,21 +275,20 @@ label, input {
 }
 .home {
 	margin-top:450px;
-
+    padding-bottom: 60px;
 	background: white;
 }
 .featured-products {
 	background-color: #F7F7F5;
 	margin-top: 20px;
 }
-.home h3 {
-	color: #0CC8F4;
-}
 .block {
-	padding-bottom: 60px;
+	position: relative;
 	padding-top: 60px;
+/*	padding-bottom: 60px;*/
 }
 .product-jumbotron {
+	margin-top: 60px;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	background: #F7F7F5;
