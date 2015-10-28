@@ -46,7 +46,8 @@
     background-color: none;
     font-size: 2em;
     font-family: Arial;
-    width: 40px;
+    width: 40px !important;
+    height:40px !important;
     color: #696969;
     border: none;
 
@@ -58,7 +59,7 @@
     font-family: Arial;
     font-size: 3em;
     color: silver;
-    width: 30px;
+    width: 20px !important;
   }
 
   #plus:hover, #moins:hover {
