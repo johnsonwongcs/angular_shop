@@ -13,7 +13,12 @@ app.config(function($routeProvider,$httpProvider){
 
 	.when('/shop',{
 		templateUrl:'templates/shop.html',
-		controller:'ShopCtrl as Ctrl'
+		controller:'ShopCtrl as Ctrl',
+		resolve:{
+			products:function(productService){
+					return productService.getProducts();
+				}
+			}
 	})
 
 	.when('/product/:productId',{

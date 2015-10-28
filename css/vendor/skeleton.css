@@ -31,7 +31,7 @@
 .container {
   position: relative;
   width: 100%;
-  max-width: 960px;
+  max-width: 1190px;
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box; }
@@ -236,7 +236,7 @@ input[type="url"],
 input[type="password"],
 textarea,
 select {
-  height: 38px;
+  height: 25px;
   padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
   background-color: #fff;
   border: 1px solid #D1D1D1;
@@ -274,7 +274,7 @@ label,
 legend {
   display: block;
   margin-bottom: .5rem;
-  font-weight: 600; }
+  /*font-weight: 600;*/ }
 fieldset {
   padding: 0;
   border-width: 0; }

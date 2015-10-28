@@ -1,24 +1,62 @@
-<section>
-    <div class="essential-oils row">
+<section class="shop">
+    <div class="essential-oils container">
+    <div class="arrow-left"><img src="css/images/left_arrow.svg"></div>
         <div class="twelve columns">
             <h2>Essential Oils</h2>
             <div class="row">
                 <ul>
-                    <li class="two columns">Single Oils</li>
+                    <li class="two columns offset-by-one column">Single Oils</li>
                     <li class="two columns">Blends</li>
                     <li class="two columns">Fragnant Oils</li>
                     <li class="two columns">Carrier Oils</li>
                     <li class="two columns">Massage Oils</li>
                 </ul>
             </div>
+            <div class="row content products">
+                <!-- <span><img src="css/images/left_arrow.svg" class="arrow"></span> -->
+                <ul>
+                    <li class='four columns'>
+                        <div class="product-box">
+                        <h3>Balsam Fir</h3>
+                            <div class="test"></div>
+                            <img src="css/images/balsam_fir.jpg">
+                        </div>
+
+                    </li>
+                    <li class='four columns'>
+                        <div class="product-box">
+                            <img src="css/images/basil_basic.jpg">
+                        </div>
+                    </li>
+                    <li class='four columns'>
+                        <div class="product-box">
+                            <img src="css/images/cedarwood.jpg">
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
-    <div class="cosmetics row">
+    <div class="cosmetics container">
         <div class="twelve columns">
             <h2>Cosmetics</h2>
-            <div>
+            <div class="row">
                 <ul>
-                    <li></li>
+                    <li class="two columns offset-by-one column">Body Lotion</li>
+                    <li class="two columns">Skin Balm</li>
+                    <li class="two columns">Lip Balm</li>
+                    <li class="two columns">Hand Cream</li>
+                    <li class="two columns">Shampoo</li>
+                </ul>
+            </div>
+            <div class="row content products">
+                <!-- <span><img src="css/images/left_arrow.svg" class="arrow"></span> -->
+                <ul>
+                    <li class='four columns' ng-repeat="randomProduct in Ctrl.randomProducts">
+                        <div class="product-box">
+                            {{randomProduct.name}} {{randomProduct.description}}
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -26,9 +64,23 @@
     <div class="healthy-environment row">
         <div class="twelve columns">
             <h2>Healthy Environment</h2>
-            <div>
+            <div class="row">
                 <ul>
-                    <li></li>
+                    <li class="two columns offset-by-one column">Difusers</li>
+                    <li class="two columns">Nebulizers</li>
+                    <li class="two columns">Lamps</li>
+                    <li class="two columns">Candles</li>
+                    <li class="two columns">Home Sprays</li>
+                </ul>
+            </div>
+            <div class="row content products">
+                <!-- <span><img src="css/images/left_arrow.svg" class="arrow"></span> -->
+                <ul>
+                    <li class='four columns' ng-repeat="randomProduct in Ctrl.randomProducts">
+                        <div class="product-box">
+                            {{randomProduct.name}} {{randomProduct.description}}
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
