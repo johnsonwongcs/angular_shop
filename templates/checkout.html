@@ -2,7 +2,7 @@
 
 <div class="container">
 	<div class="row">
-		<h2 class="twelve columns">Checkout</h2>
+		<h2 class="twelve columns block">Checkout</h2>
 	</div>
 </div>
 
@@ -11,17 +11,10 @@
 
 <div class="container">
 	<div class="row">
-		<div class="four columns" ng-repeat="product in Ctrl.Cart">
-			<img ng-src="{{product.image}}">
-		</div>
-		
-	
-	<!-- Product Details Table -->
-
-		<div class="eight columns">
 			<table class="u-full-width">
 				<thead>
 					<tr>
+						<th></th>
 						<th>Name</th>
 						<th>Description</th>
 						<th>Category</th>
@@ -31,11 +24,12 @@
 				</thead>
 				<tbody>
     				<tr ng-repeat="product in Ctrl.Cart">
+    					<td><img ng-src="{{product.image}}"></td>
         				<td>{{product.name}}</td>
        					<td>{{product.description}}</td> 
         				<td>{{product.category}}</td> 
         				<td>{{product.orderQuantity}}</td>
-        				<td>{{product.price}}</td>
+        				<td>{{product.price * product.orderQuantity | currency: "$"}}</td>
     				</tr>
     			</tbody>
 			</table>
@@ -43,8 +37,6 @@
 	</div>
 </div>
 </div>
-
-<!--Line Break--><h2> </h2>
 
 <!-- Totals Checkout Section -->
 
