@@ -11,8 +11,8 @@
 
 <div class="container">
 	<div class="row">
-		<div class="four columns ng-repeat="product in Ctrl.Cart"">
-			<img src="{{product.image}}">
+		<div class="four columns" ng-repeat="product in Ctrl.Cart">
+			<img ng-src="{{product.image}}">
 		</div>
 		
 	
@@ -50,9 +50,9 @@
 
 <div class="container">
 	<div class="row text-center">
-		<div class="offset-by-four eight columns">Subtotal: {{Ctrl.subtotal}}</div>
-		<div class="offset-by-four eight columns">Tax: {{Ctrl.tax}}</div>
-		<div class="offset-by-four eight columns"><strong>Total: {{Ctrl.total}}</strong></div>
+		<div class="offset-by-four eight columns">Subtotal: {{Ctrl.subtotal | currency: "$"}}</div>
+		<div class="offset-by-four eight columns">Tax: {{Ctrl.tax | currency: "$"}}</div>
+		<div class="offset-by-four eight columns"><strong>Total: {{Ctrl.total | currency: "$"}}</strong></div>
 	</div>
 </div>
 		
