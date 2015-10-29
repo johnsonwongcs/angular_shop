@@ -1,4 +1,10 @@
+<!-- Search -->
+
+
 <section class="shop">
+
+<!-- Essential Oils Sections -->
+
     <div class="essential-oils block">
         <div class="arrow-left"><img src="css/images/left_arrow.svg"></div>
         <div class="arrow-right"><img src="css/images/right_arrow.svg"></div>
@@ -15,9 +21,15 @@
                     </ul>
                 </div>
                 <div class="row content products">
-                    <!-- <span><img src="css/images/left_arrow.svg" class="arrow"></span> -->
+                <!--Search Section -->
+                <form>
+                    <div class="twelve columns">
+                        <input class="u-full-width" ng-model="ctrl.search" type="text" placeholder="Search">
+                    </div>
+                </form>
+                <!-- Product Listing-->
                     <ul>
-                        <li class='four columns' ng-repeat='product in Ctrl.products | filter:{category:"Essential Oils"} | limitTo:3'>
+                        <li class='four columns' ng-repeat='product in Ctrl.products | filter:{category:"Essential Oils"} | limitTo:3 | filter: {name: ctrl.search}'>
                             <div class="product-box" ng-click="Ctrl.goToProduct(product)">
                                 <div class="product" ng-class="{highlight: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
                                     <h3>{{product.name}}</h3>
@@ -47,8 +59,15 @@
                 </div>
                 <div class="row content products">
                     <!-- <span><img src="css/images/left_arrow.svg" class="arrow"></span> -->
+                <!--Search Section -->
+                <form>
+                    <div class="twelve columns">
+                        <input class="u-full-width" ng-model="ctrl.search" type="text" placeholder="Search">
+                    </div>
+                </form>
+                <!-- Product Listing-->
                     <ul>
-                        <li class='four columns' ng-repeat='product in Ctrl.products | filter:{category:"Cosmetics"}| limitTo:3'>
+                        <li class='four columns' ng-repeat='product in Ctrl.products | filter:{category:"Cosmetics"}| limitTo:3 | filter: {name: ctrl.search}'>
                             <div class="product-box" ng-click="Ctrl.goToProduct(product)">
                                 <div class="product" ng-class="{highlight: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
                                     <h3>{{product.name}}</h3>
@@ -78,8 +97,15 @@
                 </div>
                 <div class="row content products">
                     <!-- <span><img src="css/images/left_arrow.svg" class="arrow"></span> -->
+                <!--Search Section -->
+                <form>
+                    <div class="twelve columns">
+                        <input class="u-full-width" ng-model="ctrl.search" type="text" placeholder="Search">
+                    </div>
+                </form>
+                <!-- Product Listing-->
                     <ul>
-                        <li class='four columns' ng-repeat='product in Ctrl.products | filter:{category:"Healthy Environment"} |limitTo:3'>
+                        <li class='four columns' ng-repeat='product in Ctrl.products | filter:{category:"Healthy Environment"} |limitTo:3 | filter: {name: ctrl.search}'>
                             <div class="product-box" ng-click="Ctrl.goToProduct(product)">
                                 <div class="product" ng-class="{highlight: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
                                     <h3>{{product.name}}</h3>
