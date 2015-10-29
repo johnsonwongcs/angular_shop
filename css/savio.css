@@ -1,4 +1,45 @@
-
+  .confirmation h2 {
+    display: block;
+    font-size: .85em;
+  }
+  .confirmation .columns {
+  background: rgba(249, 247, 220, 0.25);
+  }
+  .orderConfirmation h2{
+    margin-bottom: 5px;
+  }
+  .confirmation input {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    bottom: 15px;
+  }
+  .confirmation h1 {
+    display: block;
+    font-size: 1em;
+    background: #F2C875;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .confirmation form {
+    margin-top: 50px;
+  }
+  .confirmation .row {
+    border: 2px;
+  }
+  .confirmation button {
+    width: 100%;
+    background: #CC7809;
+    font-size: 1.25em;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .confirmation button:hover {
+    width: 100%;
+    background: #753616;
+    font-size: 1.5em;
+    color: white;
+    font-family: 'Satisfy', sans-serif;
+  }
   .savioImage {
     margin-top: 60px;
   }
