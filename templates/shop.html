@@ -28,14 +28,10 @@
                         <input class="u-full-width" ng-model="ctrl.search_oils" type="text" placeholder="Search">
                     </div>
                 </form>
-                <!-- Product Listing-->
-                    <ul>
-                        <li class='four columns' ng-repeat='product in Ctrl.products | filter:{category:"Essential Oils"} | limitTo:3 | filter: {name: ctrl.search_oils}'>
-<!-- =======
+
                 <div class="row content products" ng-style="Ctrl.showCategory[0] == true && {'background':'#FCEABE'}">
                     <ul>
                         <li class='four columns' ng-repeat='product in Ctrl.products | filter:{category:Ctrl.categories[0]} | filter:{description: Ctrl.subcategoryEE} | limitTo:Ctrl.limit[0]' >
->>>>>>> Stashed changes -->
                             <div class="product-box" ng-click="Ctrl.goToProduct(product)">
                                 <div class="product" ng-class="{highlight: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
                                     <h3>{{product.name}}</h3>
