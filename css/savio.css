@@ -2,38 +2,40 @@
     display: block;
     font-size: .85em;
   }
-  .loginPage form {
+  .loginPage form, .adminPage form {
     margin-top: 50px;
   }
-  .loginPage {
+  .loginPage, .adminPage {
     width: 85%;
     margin: 0 auto;
   }
-  .loginPage h2 {
+  .loginPage h2, .adminPage h2 {
     display: block;
     font-size: .85em;
   }
-  .loginPage h1 {
+  .loginPage h1, .adminPage h1 {
     display: block;
     font-size: 1em;
     background: #F2C875;
     font-family: 'Montserrat', sans-serif;
     padding-left: 15px;
+    margin-top: 50px;
+    margin-bottom: 5px !important;
   }
-  .loginPage input {
+  .loginPage input, .adminPage input  {
     width: 100%;
     height: 100%;
     position: relative;
     bottom: 15px;
   }
-  .loginPage button {
+  .loginPage button, .adminPage button  {
     width: 100%;
     background: #CC7809;
     font-size: 1.25em;
     color: white;
     font-family: 'Montserrat', sans-serif;
   }
-  .loginPage button:hover {
+  .loginPage button:hover, .adminPage button:hover  {
     width: 100%;
     background: #753616;
     font-size: 1.5em;
