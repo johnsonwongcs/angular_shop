@@ -48,3 +48,8 @@ ProductPageCtrl.prototype.minus = function() {
 	console.log(this.orderQuantity);
 
 }
+
+function inCartAlert() {
+    alert("Item added to cart");
+}
+

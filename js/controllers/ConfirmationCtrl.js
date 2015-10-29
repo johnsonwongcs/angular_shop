@@ -13,3 +13,7 @@ ConfirmationCtrl.prototype.sendOrder = function(){
 			console.log(response);
 		});
 }
+
+function confirmation() {
+    alert("Thanks for you order! Your items are on their way");
+}
