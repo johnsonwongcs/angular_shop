@@ -3,7 +3,7 @@ app.service('productService',ProductService);
 function ProductService(api){
 	//services
 	this.api = api;
-
+	this.cart = JSON.parse(localStorage.getItem('Cart'));
 	this.products = localStorage.getItem('products');
 }
 
@@ -32,7 +32,11 @@ ProductService.prototype.getProducts = function(){
 		   });
 	}
 	else{
+		if (typeof(self.products) == "object"){
+			return self.products;
+		} else {
 		return JSON.parse(self.products);
+		}
 	}
 }
 ProductService.prototype.addProduct = function(product){
@@ -52,6 +56,11 @@ ProductService.prototype.addProduct = function(product){
 			});
 }
 ProductService.prototype.getProduct = function(productId){
-	this.products = JSON.parse(this.products);
-	return this.products.filter(function(product) {return product.productId === productId})[0];
+	if (typeof(this.products) !== "object"){
+		this.products = JSON.parse(this.products);
+	}
+	return this.products.filter(function(product) {return product.productId == productId})[0];
 }
+// ProductService.prototype.verifyCart = function(){
+
+// }

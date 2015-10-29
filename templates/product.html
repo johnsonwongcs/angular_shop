@@ -22,9 +22,9 @@
 								
 								<input type='button' value='-' id='moins' ng-click="Ctrl.minus()">
 
-								<input type='text' class='plusMoins' size='3' ng-model="Ctrl.orderQuantity">
+								<input type='text' size='3' ng-model="Ctrl.orderQuantity">
 								
-								<input type='button' value='+' id='plus' ng-click="Ctrl.plus()">
+								<input type='button' value='+' id='plus' ng-click="Ctrl.plus()" ng-disabled="Ctrl.orderQuantity >= Ctrl.product.quantity">
 									
 							</div>
 							

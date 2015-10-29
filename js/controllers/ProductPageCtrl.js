@@ -11,13 +11,12 @@ function ProductPageCtrl(productService,$routeParams,$location){
 	}
 
 	this.product = productService.getProduct(this.productId);
-	console.log(this.product);
-
 }
 
 ProductPageCtrl.prototype.addToCart = function(product, orderQuantity){
 	var duplicate = false;
 	for (var i=0;i<this.cart.length;i++){
+		console.log(product);
 		if (this.cart[i].productId == product.productId){
 			this.cart[i].orderQuantity += orderQuantity;
 			duplicate = true;
@@ -35,7 +34,6 @@ ProductPageCtrl.prototype.addToCart = function(product, orderQuantity){
 
 ProductPageCtrl.prototype.plus = function() {
 
-	console.log(this.orderQuantity);
 	this.orderQuantity++;
 	console.log(typeof(this.orderQuantity));
 	console.log(this.orderQuantity);
