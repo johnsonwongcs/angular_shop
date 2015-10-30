@@ -2,18 +2,18 @@
     display: block;
     font-size: .85em;
   }
-  .loginPage form, .adminPage form {
+  .loginPage form, .adminPage form, .editProducts form {
     margin-top: 50px;
   }
-  .loginPage, .adminPage {
+  .loginPage, .adminPage, .editProducts {
     width: 85%;
     margin: 0 auto;
   }
-  .loginPage h2, .adminPage h2 {
+  .loginPage h2, .adminPage h2, .editProducts h2 {
     display: block;
     font-size: .85em;
   }
-  .loginPage h1, .adminPage h1 {
+  .loginPage h1, .adminPage h1, .editProducts h1 {
     display: block;
     font-size: 1em;
     background: #F2C875;
@@ -22,13 +22,17 @@
     margin-top: 50px;
     margin-bottom: 5px !important;
   }
-  .loginPage input, .adminPage input  {
+  .editProducts {
+    margin: 0 auto;
+    padding-top: 10px;
+  }
+  .loginPage input, .adminPage input, .editProducts input  {
     width: 100%;
     height: 100%;
     position: relative;
     bottom: 15px;
   }
-  .loginPage button, .adminPage li  {
+  .loginPage button, .adminPage li, .editProducts button {
     width: 100%;
     background: #CC7809;
     font-size: 1.25em;
