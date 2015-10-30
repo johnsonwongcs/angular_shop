@@ -159,7 +159,7 @@ footer h3 {
 	min-width: 100%;
     padding-top: 191px;
 }
-.shop, .checkout {
+.shop, .checkout, .product-page {
 	padding-bottom: 60px;
 }
 .shop li {
