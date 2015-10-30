@@ -15,17 +15,17 @@
                 </div>
                 <div class='row'>
                     <div id='input_quantity'>
-                        <h2>Quantity</h2>
+                        <h4>Quantity</h4>
                         <input type='button' value='-' id='moins' ng-click="Ctrl.minus()">
                         <input type='text' size='3' ng-model="Ctrl.orderQuantity">
                         <input type='button' value='+' id='plus' ng-click="Ctrl.plus()" ng-disabled="Ctrl.orderQuantity >= Ctrl.product.quantity">
                     </div>
-                    <h2 id='status'>status: {{Ctrl.product.status}}</h2>
-                    <h2 id='price' orderQuantityplaceholder='total price'>price: {{Ctrl.product.price}}</h2>
+                    <!-- <h2 id='status'>status: {{Ctrl.product.status}}</h2> -->
+                    <h4 id='price' orderQuantityplaceholder='total price'>Price: {{Ctrl.product.price}}</h4>
                 </div>
                 <div class="row">
-                    <button class="cart three columns u-pull-left" ng-click="Ctrl.addToCart(Ctrl.product, Ctrl.orderQuantity)" onclick="inCartAlert()">
-                        <img class='svgCart' src='img/cart.svg'>
+                    <button class="button button-primary" ng-click="Ctrl.addToCart(Ctrl.product, Ctrl.orderQuantity)" onclick="inCartAlert()">Add to Cart
+<!--                         <img class='svgCart' src='img/cart.svg' ng-click="Ctrl.addToCart(Ctrl.product, Ctrl.orderQuantity)" onclick="inCartAlert()"> -->
                     </button>
                 </div>
             </div>
