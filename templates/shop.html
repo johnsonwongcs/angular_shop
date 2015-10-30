@@ -1,12 +1,8 @@
 <!-- Search -->
-
-
 <section class="shop">
-
-<!-- Essential Oils Sections -->
-
+    <!-- Essential Oils Sections -->
     <div class="essential-oils block">
-<!--         <div class="arrow-left"><img src="css/images/left_arrow.svg"></div>
+        <!--         <div class="arrow-left"><img src="css/images/left_arrow.svg"></div>
         <div class="arrow-right"><img src="css/images/right_arrow.svg"></div> -->
         <div class="container">
             <div class="twelve columns">
@@ -20,103 +16,107 @@
                         <li class="two columns" ng-click="Ctrl.subcategoryEE = 'Massage Oils'">Massage Oils</li>
                     </ul>
                 </div>
-
-                <div class="row content products">
-                <!--Search Section -->
-                <form>
-                    <div class="twelve columns">
-                        <input class="u-full-width" ng-model="ctrl.search_oils" type="text" placeholder="Search">
-                    </div>
-                </form>
-
                 <div class="row content products" ng-style="Ctrl.showCategory[0] == true && {'background':'#FCEABE'}">
-                    <ul>
-                        <li class='four columns' ng-repeat='product in Ctrl.products | filter:{category:Ctrl.categories[0]} | filter:{description: Ctrl.subcategoryEE} | limitTo:Ctrl.limit[0] | filter: ctrl.search_oils' >
-                            <div class="product-box" ng-click="Ctrl.goToProduct(product)">
-                                <div class="product" ng-class="{highlight: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
-                                    <h3>{{product.name}}</h3>
+                    <!--Search Section -->
+                    <form>
+                        <div class="twelve columns">
+                            <input class="u-full-width" ng-model="ctrl.search_oils" type="text" placeholder="Search">
+                        </div>
+                    </form>
+                    <div class="row">
+                        <ul>
+                            <li class='four columns' ng-repeat='product in Ctrl.products | filter:{category:Ctrl.categories[0]} | filter:{description: Ctrl.subcategoryEE} | limitTo:Ctrl.limit[0] | filter: ctrl.search_oils'>
+                                <div class="product-box" ng-click="Ctrl.goToProduct(product)">
+                                    <div class="product" ng-class="{highlight: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
+                                        <h3>{{product.name}}</h3>
+                                    </div>
+                                    <img src="{{product.image}}">
                                 </div>
-                                <img src="{{product.image}}">
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="row" ng-click='Ctrl.showAll(Ctrl.categories[0])' ng-style="Ctrl.showCategory[0] == true && {'display':'none'}"><div class="arrow-bottom twelve columns text-center"><img src="css/images/bottom_arrow.svg"></div></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="cosmetics block">
-        <div class="container">
-            <div class="twelve columns">
-                <h2 ng-click='Ctrl.showAll(Ctrl.categories[1]);Ctrl.subcategoryC =""'>Cosmetics</h2>
-                <div class="row">
-                    <ul>
-                        <li class="two columns offset-by-one column" ng-click="Ctrl.subcategoryC = 'Body Lotion'">Body Lotion</li>
-                        <li class="two columns" ng-click="Ctrl.subcategoryC = 'Skin Balm'">Skin Balm</li>
-                        <li class="two columns" ng-click="Ctrl.subcategoryC = 'Lip Balm'">Lip Balm</li>
-                        <li class="two columns" ng-click="Ctrl.subcategoryC = 'Hand Cream'">Hand Cream</li>
-                        <li class="two columns" ng-click="Ctrl.subcategoryC = 'Shampoo'">Shampoo</li>
-                    </ul>
-                </div>
-                <div class="row content products" ng-style="Ctrl.showCategory[1] == true && {'background':'#FCEABE'}">
-                    <!-- <span><img src="css/images/left_arrow.svg" class="arrow"></span> -->
-                <!--Search Section -->
-                <form>
-                    <div class="twelve columns">
-                        <input class="u-full-width" ng-model="ctrl.search_cosmetics" type="text" placeholder="Search">
+                            </li>
+                        </ul>
+                        <div class="row" ng-click='Ctrl.showAll(Ctrl.categories[0])' ng-style="Ctrl.showCategory[0] == true && {'display':'none'}">
+                            <div class="arrow-bottom twelve columns text-center"><img src="css/images/bottom_arrow.svg"></div>
+                        </div>
                     </div>
-                </form>
-                <!-- Product Listing-->
-                    <ul>
-                        <li class='four columns' ng-repeat='product in Ctrl.products | filter:{category:"Cosmetics"} | filter:{description: Ctrl.subcategoryC} | limitTo:Ctrl.limit[1] | filter: ctrl.search_cosmetics'>
-                            <div class="product-box" ng-click="Ctrl.goToProduct(product)">
-                                <div class="product" ng-class="{highlight: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
-                                    <h3>{{product.name}}</h3>
-                                </div>
-                                <img ng-src="{{product.image}}">
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="row" ng-click='Ctrl.showAll(Ctrl.categories[1])' ng-style="Ctrl.showCategory[1] == true && {'display':'none'}"><div class="arrow-bottom twelve columns text-center"><img src="css/images/bottom_arrow.svg"></div></div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="healthy-environment block">
-        <div class="container">
-            <div class="twelve columns">
-                <h2 ng-click='Ctrl.showAll(Ctrl.categories[2]);Ctrl.subcategoryHE =""'>Healthy Environment</h2>
-                <div class="row">
-                    <ul>
-                        <li class="two columns offset-by-one column" ng-click="Ctrl.subcategoryHE = 'Difusers'">Difusers</li>
-                        <li class="two columns" ng-click="Ctrl.subcategoryHE = 'Nebulizers'">Nebulizers</li>
-                        <li class="two columns" ng-click="Ctrl.subcategoryHE = 'Lamps'">Lamps</li>
-                        <li class="two columns" ng-click="Ctrl.subcategoryHE = 'Candles'">Candles</li>
-                        <li class="two columns" ng-click="Ctrl.subcategoryHE = 'Home Sprays'">Home Sprays</li>
-                    </ul>
-                </div>
-                <div class="row content products" ng-style="Ctrl.showCategory[2] == true && {'background':'#FCEABE'}">
-                    <!-- <span><img src="css/images/left_arrow.svg" class="arrow"></span> -->
-                <!--Search Section -->
-                <form>
-                    <div class="twelve columns">
-                        <input class="u-full-width" ng-model="ctrl.search_healthy" type="text" placeholder="Search">
+        <div class="cosmetics block">
+            <div class="container">
+                <div class="twelve columns">
+                    <h2 ng-click='Ctrl.showAll(Ctrl.categories[1]);Ctrl.subcategoryC =""'>Cosmetics</h2>
+                    <div class="row">
+                        <ul>
+                            <li class="two columns offset-by-one column" ng-click="Ctrl.subcategoryC = 'Body Lotion'">Body Lotion</li>
+                            <li class="two columns" ng-click="Ctrl.subcategoryC = 'Skin Balm'">Skin Balm</li>
+                            <li class="two columns" ng-click="Ctrl.subcategoryC = 'Lip Balm'">Lip Balm</li>
+                            <li class="two columns" ng-click="Ctrl.subcategoryC = 'Hand Cream'">Hand Cream</li>
+                            <li class="two columns" ng-click="Ctrl.subcategoryC = 'Shampoo'">Shampoo</li>
+                        </ul>
                     </div>
-                </form>
-                <!-- Product Listing-->
-                    <ul>
-                        <li class='four columns' ng-repeat='product in Ctrl.products | filter:{category:"Healthy Environment"} | filter:{description: Ctrl.subcategoryHE} |limitTo:Ctrl.limit[2] | ctrl.search_healthy'>
-                            <div class="product-box" ng-click="Ctrl.goToProduct(product)">
-                                <div class="product" ng-class="{highlight: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
-                                    <h3>{{product.name}}</h3>
-                                </div>
-                                <img src="{{product.image}}">
+                    <div class="row content products" ng-style="Ctrl.showCategory[1] == true && {'background':'#FCEABE'}">
+                        <!-- <span><img src="css/images/left_arrow.svg" class="arrow"></span> -->
+                        <!--Search Section -->
+                        <form>
+                            <div class="twelve columns">
+                                <input class="u-full-width" ng-model="ctrl.search_cosmetics" type="text" placeholder="Search">
                             </div>
-                        </li>
-                    </ul>
-                    <div class="row" ng-click='Ctrl.showAll(Ctrl.categories[2])' ng-style="Ctrl.showCategory[2] == true && {'display':'none'}"><div class="arrow-bottom twelve columns text-center"><img src="css/images/bottom_arrow.svg"></div></div>
+                        </form>
+                        <!-- Product Listing-->
+                        <ul>
+                            <li class='four columns' ng-repeat='product in Ctrl.products | filter:{category:"Cosmetics"} | filter:{description: Ctrl.subcategoryC} | limitTo:Ctrl.limit[1] | filter: ctrl.search_cosmetics'>
+                                <div class="product-box" ng-click="Ctrl.goToProduct(product)">
+                                    <div class="product" ng-class="{highlight: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
+                                        <h3>{{product.name}}</h3>
+                                    </div>
+                                    <img ng-src="{{product.image}}">
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="row" ng-click='Ctrl.showAll(Ctrl.categories[1])' ng-style="Ctrl.showCategory[1] == true && {'display':'none'}">
+                            <div class="arrow-bottom twelve columns text-center"><img src="css/images/bottom_arrow.svg"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="healthy-environment block">
+            <div class="container">
+                <div class="twelve columns">
+                    <h2 ng-click='Ctrl.showAll(Ctrl.categories[2]);Ctrl.subcategoryHE =""'>Healthy Environment</h2>
+                    <div class="row">
+                        <ul>
+                            <li class="two columns offset-by-one column" ng-click="Ctrl.subcategoryHE = 'Difusers'">Difusers</li>
+                            <li class="two columns" ng-click="Ctrl.subcategoryHE = 'Nebulizers'">Nebulizers</li>
+                            <li class="two columns" ng-click="Ctrl.subcategoryHE = 'Lamps'">Lamps</li>
+                            <li class="two columns" ng-click="Ctrl.subcategoryHE = 'Candles'">Candles</li>
+                            <li class="two columns" ng-click="Ctrl.subcategoryHE = 'Home Sprays'">Home Sprays</li>
+                        </ul>
+                    </div>
+                    <div class="row content products" ng-style="Ctrl.showCategory[2] == true && {'background':'#FCEABE'}">
+                        <!-- <span><img src="css/images/left_arrow.svg" class="arrow"></span> -->
+                        <!--Search Section -->
+                        <form>
+                            <div class="twelve columns">
+                                <input class="u-full-width" ng-model="ctrl.search_healthy" type="text" placeholder="Search">
+                            </div>
+                        </form>
+                        <!-- Product Listing-->
+                        <ul>
+                            <li class='four columns' ng-repeat='product in Ctrl.products | filter:{category:"Healthy Environment"} | filter:{description: Ctrl.subcategoryHE} |limitTo:Ctrl.limit[2]'>
+                                <div class="product-box" ng-click="Ctrl.goToProduct(product)">
+                                    <div class="product" ng-class="{highlight: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
+                                        <h3>{{product.name}}</h3>
+                                    </div>
+                                    <img src="{{product.image}}">
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="row" ng-click='Ctrl.showAll(Ctrl.categories[2])' ng-style="Ctrl.showCategory[2] == true && {'display':'none'}">
+                            <div class="arrow-bottom twelve columns text-center"><img src="css/images/bottom_arrow.svg"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 </section>
