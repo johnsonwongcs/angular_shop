@@ -52,6 +52,15 @@ app.config(function($routeProvider,$httpProvider){
 		templateUrl:'templates/edit_product.html',
 		controller:'ProductCtrl as Ctrl'
 	})
+	.when('/view_orders',{
+		templateUrl:'templates/view_orders.html',
+		controller:'ViewOrdersCtrl as Ctrl',
+		resolve:{
+			orders: function(api){
+				return api.request('/retrieve_orders/team2',{},'GET');
+			}
+		}
+	})
 	.when('/checkout',{
 		templateUrl:'templates/checkout.html',
 		controller:'CheckoutCtrl as Ctrl'
