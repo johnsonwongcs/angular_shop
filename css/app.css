@@ -159,7 +159,7 @@ footer h3 {
 	min-width: 100%;
     padding-top: 191px;
 }
-.shop {
+.shop, .checkout {
 	padding-bottom: 60px;
 }
 .shop li {
@@ -306,4 +306,56 @@ label, input {
 .image {
     width: 100%;
     height: 100%;
+}
+/*------------------------------------------------------Checkout---------------------------------------------------------*/
+table{
+    border: 1px solid #e6e6e6;
+    table-layout: auto;
+}
+.checkout img {
+    max-width: 4em;
+    max-height: 4em;
+}
+.checkout table {
+        border-spacing: 0px;
+}
+table th, table td {
+	   border: 1px solid #e6e6e6;
+	   text-align: center;
+	   padding: 1em;
+}
+.table-products td:nth-child(6n+1) {
+	padding-left: 1em;
+}
+.table-products td:nth-child(6n) {
+	padding-right: 1em;
+}
+.table-total td:nth-child(odd) {
+	padding-left: 1em;
+}
+.table-total td:nth-child(2n) {
+	padding-right: 1em;
+}
+th {
+	background: #F7F7F5;
+}
+.checkout thead {
+	vertical-align: middle;
+}
+.remove-product {
+	color: #FFFFFF;
+    padding: 0.4em 1em 0.6em 1em;
+	background: #F2C875;
+	border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+border: 0px solid #000000;
+}
+.remove-product:hover {
+   background: #FCEABE;
+}
+input[type="number"] {
+	text-align: center;
+	height: 2em;
+	width: 3em;
 }
