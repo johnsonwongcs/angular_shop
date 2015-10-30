@@ -99,16 +99,16 @@
                         <form>
                             <div class="twelve columns">
                                 <input class="u-full-width" ng-model="ctrl.search_healthy" type="text" placeholder="Search">
-                            </div>
-                        </form>
-                        <!-- Product Listing-->
-                        <ul>
-                            <li class='four columns' ng-repeat='product in Ctrl.products | filter:{category:"Healthy Environment"} | filter:{description: Ctrl.subcategoryHE} |limitTo:Ctrl.limit[2]'>
-                                <div class="product-box" ng-click="Ctrl.goToProduct(product)">
-                                    <div class="product" ng-class="{highlight: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
-                                        <h3>{{product.name}}</h3>
-                                    </div>
-                                    <img src="{{product.image}}">
+                </form>
+                <!-- Product Listing-->
+                    <ul>
+                        <li class='four columns' ng-repeat='product in Ctrl.products | filter:{category:"Healthy Environment"} | filter:{description: Ctrl.subcategoryHE} |limitTo:Ctrl.limit[2] | filter: ctrl.search_healthy'>
+                            <div class="product-box" ng-click="Ctrl.goToProduct(product)">
+                                <div class="product" ng-class="{highlight: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
+                                    <h3>{{product.name}}</h3>
+                                </div>
+                                <img src="{{product.image}}">
+
                                 </div>
                             </li>
                         </ul>
