@@ -139,7 +139,7 @@ footer h3 {
 	font-size: 0.6em;
 	margin: 20px;
 }
-<<<<<<< HEAD
+
 /*------------------------------------------------------Shop------------------------------------------------------------*/
 .essential-oils, .cosmetics, .healthy-environment {
 	margin-top: 20px;
@@ -175,9 +175,6 @@ footer h3 {
 .content li {
 	margin-top: 20px;
 }
-/*.content-active {
-	background: #FCEABE;
-}*/
 
 .products li {
 	font-family: 'Satisfy', cursive;
@@ -244,14 +241,8 @@ label, input {
 @media (min-width: 750px) {
 
 }
-=======
 
 /*------------------------------------------------------Home Page---------------------------------------------------------*/
-
-.welcome{
-/*	opacity: 100;*/
-	color: black;
-}
 
 .jumbotron_cover {
   height: 100%;
@@ -295,7 +286,6 @@ label, input {
 .block {
 	position: relative;
 	padding-top: 60px;
-/*	padding-bottom: 60px;*/
 }
 .product-jumbotron {
 	margin-top: 60px;

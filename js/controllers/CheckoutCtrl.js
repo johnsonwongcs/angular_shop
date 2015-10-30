@@ -1,6 +1,8 @@
 app.controller('CheckoutCtrl', CheckoutCtrl);
 
-function CheckoutCtrl($location, $route) {
+function CheckoutCtrl($location,$route,productService,api) {
+    this.api = api;
+    this.ProductService = productService;
     this.route = $route;
     this.location = $location
     this.Cart = JSON.parse(localStorage.getItem('Cart'));
