@@ -1,7 +1,10 @@
 app.controller('CheckoutCtrl',CheckoutCtrl);
 
-function CheckoutCtrl($location){
+function CheckoutCtrl($location,api,productService){
 	
+	this.ProductService = productService;
+	console.log(this.ProductService);
+	this.api = api;
 	this.location = $location
 	this.Cart = JSON.parse(localStorage.getItem('Cart'));
 	console.log(this.Cart);
@@ -18,6 +21,7 @@ function CheckoutCtrl($location){
 	this.sendCart.total = this.subtotal;
 	this.sendCart.tax = this.tax;
 	this.sendCart.final_total = this.total;
+	this.products = JSON.parse(localStorage.getItem('products'));
 	console.log(this.sendCart);
 	localStorage.setItem('sendCart', JSON.stringify(this.sendCart));
 
@@ -34,8 +38,8 @@ CheckoutCtrl.prototype.sendOrder = function(){
 		});
 }
 
-function confirmation() {
+CheckoutCtrl.prototype.confirmation = function(){
     alert("Thanks for you order! Your items are on their way");
-
-		this.ProductService.updateLocalStorage();
+    // this.ProductService.updateLocalStorage();
+		
 }

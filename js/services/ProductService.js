@@ -68,38 +68,38 @@ ProductService.prototype.verifyCart = function(){
 	if (typeof(this.products) !== "object"){
 		this.products = JSON.parse(this.products);
 	}
-	console.log(this.products);
-	console.log(this.sendCart.cart.length);
 	//Find index of cart product in products array
-	for (var i = 0; i < self.sendCart.cart.length; i++){
-			self.index = _.findIndex(self.products, function(product){
+	for (var i = 0; i < this.sendCart.cart.length; i++){
+		self.index = _.findIndex(self.products, function(product){
 			return product.productId == self.sendCart.cart[i].productId;
-			});
-	//Update product quantity
-		console.log(self.products);
-		console.log(typeof(self.products));
-		console.log("self.index"+self.index);
+		});
+		//Update product quantity
 		self.products[self.index].quantity -= self.sendCart.cart[i].orderQuantity;
-	//Edit product on server
+		//Edit product on server
 		this.editProduct = angular.copy(self.products[self.index]);
 		delete this.editProduct.productId;
-		console.log(this.editProduct);
-		// console.log(self.products[self.index].productId);
-		return this.api.request('/editproduct/'+self.products[self.index].productId,this.editProduct,'POST')
+		this.api.request('/editproduct/'+self.products[self.index].productId,this.editProduct,'POST')
 			.then(function(response){
 				console.log(response);
 			});
 	}
-
-}
-ProductService.prototype.updateLocalStorage = function(){
-
-	console.log('here');
 	//Update product quantity in localStorage
-	console.log(this.products);
 	localStorage.setItem('products', JSON.stringify(this.products));
-	// localStorage.setItem('Cart',{});
-	// localStorage.setItem('sendCart',{});
+	localStorage.removeItem('Cart');
+	localStorage.removeItem('sendCart');
 	// this.cart = {};
 	// this.sendCart = {};
+    // alert("Thanks for you order! Your items are on their way");
+
 }
+// ProductService.prototype.updateLocalStorage = function(){
+
+// 	console.log('here');
+// 	//Update product quantity in localStorage
+// 	console.log(this.products);
+// 	localStorage.setItem('products', JSON.stringify(this.products));
+// 	localStorage.removeItem('Cart');
+// 	localStorage.removeItem('sendCart');
+// 	// this.cart = {};
+// 	// this.sendCart = {};
+// }

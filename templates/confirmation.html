@@ -93,11 +93,9 @@
 				<h1>Order Confirmation</h1>
 			</div>
 			<div>
-					<h2 id='orderId'>Order Id: {{Ctrl.product.orderId}}</h2>
-					<h2 id='cart'>Cart: {{Ctrl.product.cart}}</h2>
-					<h2 id='total'>Total: {{Ctrl.product.total}}</h2>
-					<h2 id='tax'>Tax: {{Ctrl.product.tax}}</h2>
-					<h2 id='final_total'>Final Total: {{Ctrl.product.final_total}}</h2>
+					<h2 id='total'>Total: {{Ctrl.sendCart.total | currency}}</h2>
+					<h2 id='tax'>Tax: {{Ctrl.sendCart.tax | currency}}</h2>
+					<h2 id='final_total'>Final Total: {{Ctrl.sendCart.final_total | currency}}</h2>
 			</div>
 		</form>
 	</div>
@@ -106,13 +104,6 @@
 </div>
 <div class='row confirmation'>
 	<div class='twelve columns'>
-		<button class="button" ng-click="Ctrl.sendOrder()" onclick="confirmation()">Checkout</button>
+		<button class="button" ng-click="Ctrl.sendOrder()">Checkout</button>
 	</div>
 </div>
-	<!-- {
-	 orderId:' ',
-	 cart:[cartobject],
-	 total:' ',
-	 tax:' ',
-	 final_total:' '
-	} -->
