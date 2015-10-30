@@ -87,19 +87,6 @@ ProductService.prototype.verifyCart = function(){
 	localStorage.setItem('products', JSON.stringify(this.products));
 	localStorage.removeItem('Cart');
 	localStorage.removeItem('sendCart');
-	// this.cart = {};
-	// this.sendCart = {};
-    // alert("Thanks for you order! Your items are on their way");
+    alert("Thanks for you order! Your items are on their way");
 
 }
-// ProductService.prototype.updateLocalStorage = function(){
-
-// 	console.log('here');
-// 	//Update product quantity in localStorage
-// 	console.log(this.products);
-// 	localStorage.setItem('products', JSON.stringify(this.products));
-// 	localStorage.removeItem('Cart');
-// 	localStorage.removeItem('sendCart');
-// 	// this.cart = {};
-// 	// this.sendCart = {};
-// }

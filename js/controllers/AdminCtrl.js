@@ -7,10 +7,12 @@ function AdminCtrl(api,productService,$location,products){
 	//services
 	this.productService = productService;
 	this.products = products;
-	console.log(this.products);
-	this.api.request('/retrieve_orders/team2',{},'GET')
+
+	this.orders = this.api.request('/retrieve_orders/team2',{},'GET')
 		.then(function(response){
 			console.log(response);
+			return response.data;
 		});
+	console.log(this.orders);
 
 }

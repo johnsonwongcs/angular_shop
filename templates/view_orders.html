@@ -1,0 +1,26 @@
+<!-- View Orders Header -->
+
+<div class="container">
+	<div class="row">
+		<h2 class="twelve columns block">Orders</h2>
+	</div>
+</div>
+
+<!-- Orders Details -->
+	<!-- Image Container -->
+
+<div class="container">
+	<div class="row">
+
+				<div class="order" ng-repeat="order in Ctrl.orders">
+					Order ID: {{order.orderId}}
+					Order Total: {{order.total | currency}}
+					<div ng-repeat="product in order.cart track by $index">
+						{{product.name}}
+						{{product.orderQuantity}}
+						{{product.price}}
+					</div>
+				</div>
+
+	</div>
+</div>
