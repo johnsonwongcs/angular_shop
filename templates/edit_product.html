@@ -4,17 +4,25 @@
 			Edit Product
 		</h1>
 	</div>
-	<div class="row">
-		<input class="three columns" type="text" ng-model="Ctrl.editProduct.name" placeholder="name">
-		<input class="two columns" type="text" ng-model="Ctrl.editProduct.price" placeholder="price">
-		<input class="three columns" inputMar type="text" ng-model="Ctrl.editProduct.category" placeholder="category">
-		<input class="two columns" type="text" ng-model="Ctrl.editProduct.quantity" placeholder="quantity">
+	<div class="row rowMargin">
+		<div class="three columns" >
+			<input type="text" ng-model="Ctrl.editProduct.name" placeholder="name">
+		</div>
+		<div class="three columns" >
+			<input type="text" ng-model="Ctrl.editProduct.price" placeholder="price">
+		</div>
+		<div class="three columns" >
+			<input type="text" ng-model="Ctrl.editProduct.category" placeholder="category">
+		</div>
+		<div class="three columns" >
+			<input type="text" ng-model="Ctrl.editProduct.quantity" placeholder="quantity">
+		</div>
 
 	</div>
 		
 		<textarea class='twelve columns' ng-model="Ctrl.editProduct.description" placeholder="description"></textarea>
 		<input class="twelve columns" type="text" ng-model="Ctrl.editProduct.image" placeholder="image url">
-		<div class='three columns'>
+		<div class='twelve columns'>
 			<form ng-submit="Ctrl.findEditProduct(productID)">
 				<input class='twelve columns' type="text" ng-model="productID" placeholder="product ID">
 
