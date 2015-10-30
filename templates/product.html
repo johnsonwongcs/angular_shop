@@ -17,7 +17,7 @@
                     <div id='input_quantity'>
                         <h4>Quantity</h4>
                         <input type='button' value='-' id='moins' ng-click="Ctrl.minus()">
-                        <input type='text' size='3' ng-model="Ctrl.orderQuantity">
+                        <input type='number' ng-model="Ctrl.orderQuantity">
                         <input type='button' value='+' id='plus' ng-click="Ctrl.plus()" ng-disabled="Ctrl.orderQuantity >= Ctrl.product.quantity">
                     </div>
                     <!-- <h2 id='status'>status: {{Ctrl.product.status}}</h2> -->

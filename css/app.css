@@ -349,3 +349,7 @@ input[type="number"] {
 	height: 2em;
 	width: 3em;
 }
+
+.product-page {
+	background: #F7F7F5;
+}
