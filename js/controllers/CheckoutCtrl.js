@@ -26,3 +26,16 @@ function CheckoutCtrl($location){
 CheckoutCtrl.prototype.gotoConfirmation = function(){
 	this.location.path(/confirmation/);
 }
+CheckoutCtrl.prototype.sendOrder = function(){
+	this.ProductService.verifyCart();
+	this.api.request('/record_order',this.sendCart,'POST')
+		.then(function(response){
+			console.log(response);
+		});
+}
+
+function confirmation() {
+    alert("Thanks for you order! Your items are on their way");
+
+		this.ProductService.updateLocalStorage();
+}

@@ -30,7 +30,6 @@ ProductCtrl.prototype.findEditProduct = function(productId){
 	this.index = _.findIndex(this.products, function(product){
 		return product.productId == self.editProduct.productId;
 	});
-	console.log("index = "+this.index);
 }
 ProductCtrl.prototype.saveProduct = function(name, description, image, price, category, quantity, status){
 	var saveProduct = {
@@ -43,15 +42,10 @@ ProductCtrl.prototype.saveProduct = function(name, description, image, price, ca
 		status:status,
 		productId:this.editProduct.productId
 	}
-	var sendProduct = {
-		name:name,
-		description:description,
-		image:image,
-		category:category,
-		price:price,
-		quantity:quantity,
-		status:status,
-	}
+	var sendProduct = saveProduct;
+	delete sendProduct.productId;
+	console.log(sendProduct);
+
 	this.products[this.index] = saveProduct;
 	console.log(this.products);
 	//Update localStorage
