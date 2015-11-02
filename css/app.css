@@ -150,7 +150,7 @@ footer h3 {
 	padding-left: 25px;
     padding-right: 25px;
 }
-.text-center {
+.nter {
 	text-align: center;
 }
 .main {
@@ -190,12 +190,12 @@ footer h3 {
 	margin-right: auto;
 	margin-left: auto;
 	position: relative;
+	text-align: center;
 }
 .product-box img {
 	width: 210px;
 	height: 210px;
-	margin-top: 20px;
-	margin-left: 20px;
+	margin-top: 1em;
 }
 .product {
 	width: 100%;
@@ -332,7 +332,7 @@ th {
 .checkout thead {
 	vertical-align: middle;
 }
-.remove-product {
+.remove-product, .plus-minus {
 	color: #FFFFFF;
     padding: 0.4em 1em 0.6em 1em;
 	background: #F2C875;
@@ -348,8 +348,25 @@ input[type="number"] {
 	text-align: center;
 	height: 2em;
 	width: 3em;
+	margin-bottom: 0px;
+	margin-right: 1em;
+	margin-left: 1em;
 }
 
 .product-page {
 	background: #F7F7F5;
+}
+.product-page .product-box {
+	height: 20em;
+	width:20em;
+}
+.product-page .product-box img {
+	height: 15em;
+	width: 15em;
+	margin-top: 2.5em;
+/*	left: 50%;
+	right: 50%;*/
+}
+.description, .price, .status {
+	margin-bottom: 20px;
 }
