@@ -1,0 +1,36 @@
+<section class="product-page">
+    <div class="block container">
+        <div class="twelve columns">
+            <div class='row'>
+                <div class='four columns'>
+                    <div class="product-box">
+                        <img src="{{Ctrl.product.image}}">
+                    </div>
+                </div>
+                <div class='eight columns'>
+                    <div>
+                        <h3>{{Ctrl.product.name}}</h3>
+                    </div>
+                    <div class='price'>{{Ctrl.product.price | currency}}</div>
+                    <!--                 <div class='status'></div> -->
+                    <div class='description'>
+                        <div>{{Ctrl.product.description}}</div>
+                    </div>
+                    <div class='row'>
+                        <div class="four columns">
+                            <a class="plus-minus" ng-click="Ctrl.minus()">-</a>
+                            <input class="quantity-input" type='number' ng-model="Ctrl.orderQuantity">
+                            <a class="plus-minus" ng-click="Ctrl.plus()" ng-disabled="Ctrl.orderQuantity >= Ctrl.product.quantity">+</a>
+                        </div>
+                        <div class='status four columns text-center' ng-if="Ctrl.product.status=='active'">In Stock</div>
+                        <div class='status four columns text-center' ng-if="Ctrl.product.status!='active'">Out Of Stock</div>
+                        <div class="four columns text-center">
+                            <button class="button button-primary" ng-click="Ctrl.addToCart(Ctrl.product, Ctrl.orderQuantity)" onclick="inCartAlert()">Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
